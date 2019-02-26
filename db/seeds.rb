@@ -12,37 +12,32 @@ User.destroy_all
 user1 = User.create!(
   email: 'frdutheil@hyahoo.fr',
   password: '123456',
-  first_name: 'François',
-  last_name: 'Dutheil'
+  username: 'François Dutheil',
   )
 
 user2 = User.create!(
   email: 'eleonore.breton@hec.edu',
   password: 'password',
-  first_name: 'Eléonore',
-  last_name: 'Breton'
+  username: 'Eléonore Breton',
   )
 
 user3 = User.create!(
   email: 'momo.latulipe@gmail.com',
   password: '125688',
-  first_name: 'Momo',
-  last_name: 'latulipe'
+  username: 'Momo latulipe',
   )
 
 user4 = User.create!(
   email: 'pepe.lemoko@gmail.com',
   password: '3256777',
-  first_name: 'Pepe',
-  last_name: 'LeMoko'
+  username: 'Pepe LeMoko',
   )
 
 
 user5 = User.create!(
   email: 'carolinemarie.girard@gmail.com',
   password: '579222',
-  first_name: 'Caroline',
-  last_name: 'Girard'
+  username: 'Caroline Girard',
   )
 
 Location.create!(
