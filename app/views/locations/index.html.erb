@@ -1,2 +1,7 @@
-<h1>Locations#index</h1>
-<p>Find me in app/views/locations/index.html.erb</p>
+<h1> Carte des lieux </h1>
+
+<% @locations.each do |location| %>
+  <p> <%= location.name %> </p>
+  <p> <%= location.longitude %> </p>
+  <p> <%= location.latitude %> </p>
+<% end %>
