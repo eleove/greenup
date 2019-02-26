@@ -12,13 +12,13 @@ User.destroy_all
 user1 = User.create!(
   email: 'frdutheil@hyahoo.fr',
   password: '123456',
-  username: 'François Dutheil',
+  username: 'François Dutheil'
   )
 
 user2 = User.create!(
   email: 'eleonore.breton@hec.edu',
   password: 'password',
-  username: 'Eléonore Breton',
+  username: 'Eléonore Breton'
   )
 
 user3 = User.create!(
