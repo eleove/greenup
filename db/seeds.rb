@@ -23,6 +23,28 @@ user2 = User.create!(
   last_name: 'Breton'
   )
 
+user3 = User.create!(
+  email: 'momo.latulipe@gmail.com',
+  password: '125688',
+  first_name: 'Momo',
+  last_name: 'latulipe'
+  )
+
+user4 = User.create!(
+  email: 'pepe.lemoko@gmail.com',
+  password: '3256777',
+  first_name: 'Pepe',
+  last_name: 'LeMoko'
+  )
+
+
+user5 = User.create!(
+  email: 'carolinemarie.girard@gmail.com',
+  password: '579222',
+  first_name: 'Caroline',
+  last_name: 'Girard'
+  )
+
 Location.create!(
   name: 'Annecy',
   latitude: 45.899246,
@@ -35,4 +57,26 @@ Location.create!(
   latitude: 48.475479,
   longitude: 2.693954,
   user: user2
+  )
+
+Location.create!(
+  name: 'Massignieu-de-Rives',
+  latitude: 45.899246,
+  longitude: 5.7809804,
+  user: user3
+  )
+
+Location.create!(
+  name: 'Corniche de la Mer Benodet',
+  latitude: 47.8690904,
+  longitude: -4.1018991,
+  user: user4
+  )
+
+
+Location.create!(
+  name: 'Le Riousset Valence',
+  latitude: 44.8642903,
+  longitude: 5.0267602,
+  user: user5
   )
