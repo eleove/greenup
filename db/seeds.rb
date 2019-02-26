@@ -12,15 +12,13 @@ User.destroy_all
 user1 = User.create!(
   email: 'frdutheil@hyahoo.fr',
   password: '123456',
-  first_name: 'François',
-  last_name: 'Dutheil'
+  username: 'François Dutheil'
   )
 
 user2 = User.create!(
   email: 'eleonore.breton@hec.edu',
   password: 'password',
-  first_name: 'Eléonore',
-  last_name: 'Breton'
+  username: 'Eléonore Breton'
   )
 
 Location.create!(
