@@ -24,7 +24,7 @@ user2 = User.create!(
 user3 = User.create!(
   email: 'momo.latulipe@gmail.com',
   password: '125688',
-  username: 'Momo latulipe',
+  username: 'Momo Latulipe'
   )
 
 user4 = User.create!(
@@ -37,7 +37,7 @@ user4 = User.create!(
 user5 = User.create!(
   email: 'carolinemarie.girard@gmail.com',
   password: '579222',
-  username: 'Caroline Girard',
+  username: 'Caroline Girard'
   )
 
 Location.create!(

@@ -3,8 +3,8 @@
     <video autoplay="autoplay" loop muted>
       <source src="<%= asset_path("video.mp4") %>" type="video/mp4">
     </video>
-    <div class="btn">Signaler un lieu à nettoyer</div>
-  </div>
+    <!-- <div class="btn">Signaler un lieu à nettoyer</div> -->
+    <%= link_to 'Signaler un lieu à nettoyer', locations_path, class: "btn" %>
 
   <div class="questcequegreenup">
     <img src=<%= asset_path("pi.png") %> alt="point d'interrogation fond">
