@@ -1,12 +1,28 @@
 <body>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand');
+  </style>
   <div class="banner">
+    <h2>Marre de te promener dans les déchêts ?</h2>
+    <%= link_to 'Signaler un lieu à nettoyer', locations_path, class: "btn" %>
+  </div>
+
+  <div class="questcequegreenup">
+    <h3>C'est quoi Green Up ?</h3>
+    <p>Tu te balades et tu vois un tas d'ordure. Ton réflexe : Green Up !</p>
+    <p>
+      Signale l'endroit où tu es sur la carte. Préviens les autres. Regroupez-vous pour le nettoyage.
+    </p>
+    <p>C'est un petit pas pour l'homme, un grand pas pour l'environnement</p>
+
+  </div>
+
+  <div class="video">
+    <h3><i class="fas fa-hand-point-right handmain"> </i>Rejoins une équipe</h3>
     <video autoplay="autoplay" loop muted>
       <source src="<%= asset_path("video.mp4") %>" type="video/mp4">
     </video>
-    <!-- <div class="btn">Signaler un lieu à nettoyer</div> -->
-    <%= link_to 'Signaler un lieu à nettoyer', locations_path, class: "btn" %>
-
-  <div class="questcequegreenup">
-    <img src=<%= asset_path("pi.png") %> alt="point d'interrogation fond">
   </div>
+
+
 </body>
