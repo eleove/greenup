@@ -6,7 +6,9 @@ const initMapbox = () => {
 
   if (mapElement) { // only build a map if there's a div#map to inject into
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-    var geocoder = new MapboxGeocoder()
+    const geocoder = new MapboxGeocoder({ // Initialize the geocoder
+      accessToken: mapboxgl.accessToken, // Set the access token
+    });
     const markers = JSON.parse(mapElement.dataset.markers);
     if (window.location.pathname === '/locations' || '/locations/' ) {
       // centrer sur la France

@@ -1,0 +1,10 @@
+<%= simple_form_for @location do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible" %>
+  <%= f.input :description, placeholder: "Décrivez l'emplacement"%>
+  <!-- RAJOUTER PHOTO UPLOADER -->
+  <input type="hidden" name="lat" id="lat">
+  <input type="hidden" name="long" id="long">
+
+  <%= f.submit "Créer", class: "btn btn-block btn-success" %>
+<% end %>
