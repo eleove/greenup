@@ -1,0 +1,60 @@
+// RAJOUTER MEDIA QUERIES
+
+#map {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#addlocationbutton {
+  position: absolute;
+  bottom: 110px; // media query
+  left: 175px; // media query
+  border: solid;
+  border-radius: 50%;
+  background-color: yellow;
+  color: black;
+  font-size: 32px;
+  padding: 5px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  z-index: 2;
+}
+
+// .mapboxgl-ctrl-geocoder {
+//   position:absolute;
+//   z-index:1;
+//   width:50%;
+//   left:50%;
+//   margin-left:-25%;
+//   top:20px;
+// }
+
+.geocoder {
+  position:absolute;
+  z-index:1;
+  // width:50%;
+  // left:50%;
+  // margin-left:-34%;
+  top:100px;
+}
+
+.mapboxgl-ctrl-geocoder {
+  height: 55px;
+  min-width: 90vw !important;
+  margin-left: 8px;
+
+  input[type='text'] {
+    font-size: 18px !important;
+    height: 56px !important;
+  }
+}
+
+.mapboxgl-ctrl-geocoder .geocoder-icon-search {
+    position: absolute;
+    top: 18px !important;
+    left: 10px;
+}
+
+

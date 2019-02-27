@@ -10,47 +10,32 @@ const initMapbox = () => {
       accessToken: mapboxgl.accessToken, // Set the access token
     });
     const markers = JSON.parse(mapElement.dataset.markers);
-    if (window.location.pathname === '/locations' || '/locations/' ) {
-      // centrer sur la France
-      const bbox = [[-1.642917, 42.525317], [8.094191, 51.016994]];
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11'
-      });
-      map.fitBounds(bbox, {
-        padding: {top: 10, bottom:15, left: 5, right: 5}
-      });
-      map.addControl(geocoder);
-      markers.forEach((marker) => {
-        new mapboxgl.Marker()
-          .setLngLat([ marker.long, marker.lat ])
-          .addTo(map);
-      });
-    } else {
-      // centrer (en zoomant ease) sur le lieu choisi par l'user / sa géoloc actuelle
-      const bounds = new mapboxgl.LngLatBounds();
-      // TODO : SELEC DANS CONTROLLER LES LOCATIONS_MARKERS "PROCHES" DU LIEU CHOISI
-      markers.forEach((marker) => {
-        bounds.extend([marker.long, marker.lat]);
-      });
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11'
-      });
-      // map.fitBounds(bbox, {
-      //   padding: {top: 10, bottom:15, left: 5, right: 5}
-      // });
-      map.fitBounds(bounds, {
-        padding: {top: 10, bottom:15, left: 5, right: 5}
-      });
-      map.addControl(geocoder);
-      markers.forEach((marker) => {
-        new mapboxgl.Marker()
-          .setLngLat([ marker.long, marker.lat ])
-          .addTo(map);
-      });
-    }
-  }
+    // centrer sur la France
+    const bbox = [[-5.025736, 42.084348], [9.415401, 51.242286]];
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
+    map.fitBounds(bbox, {
+      padding: {top: 10, bottom:15, left: 5, right: 5}
+    });
+    // map.addControl(geocoder);
+    markers.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+      const element = document.createElement('div');
+      element.className = 'marker';
+      element.style.backgroundImage = `url('${marker.image_url}')`;
+      element.style.backgroundSize = 'contain';
+      element.style.width = '30px';//'15px';
+      element.style.height = '42px';//'21px';
+      new mapboxgl.Marker(element)
+        .setLngLat([ marker.long, marker.lat ])
+        .setPopup(popup)
+        .addTo(map)
+    });
+    // map.addControl(new mapboxgl.NavigationControl());
+    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+  };
 };
 
 export { initMapbox };
