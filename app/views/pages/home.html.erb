@@ -17,8 +17,10 @@
 
   </div>
 
+  <% texts = ["Un mouchoir en papier met 3 mois à se dégrader", "Un trognon de pomme met 5 mois à se dégrader", "Une carte téléphonique met 1000 ans à se dégrader", "un filet de pêche met 600 ans à se dégrader", "Une brique de lait met 5 mois à se dégrader", "De l'huile de vidange met 15 ans à se dégrader", "Un papier de bonbon met 5 ans à se dégrader", "un journal met 12 mois à se dégrader", "un ticket de bus met un an à se dégrader"] %>
+
   <div class="video">
-    <h3><i class="fas fa-hand-point-right handmain"> </i>Rejoins une équipe</h3>
+    <h3><i class="fas fa-hand-point-right handmain"> </i> <%= texts.sample %> </h3>
     <video autoplay="autoplay" loop muted>
       <source src="<%= asset_path("video.mp4") %>" type="video/mp4">
     </video>
