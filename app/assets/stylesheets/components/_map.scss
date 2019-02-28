@@ -57,7 +57,12 @@
     left: 10px;
 }
 
-.mapboxgl-popup-content h2 {
-  margin: 0;
+.mapboxgl-popup-content {
+  padding: 3px 12px !important;
+  max-width: 250px;
+  h2 {
+    margin: 2px 0px 8px 0px !important;
+    line-height: 0.7 !important;
+  }
 }
 
