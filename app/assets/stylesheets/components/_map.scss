@@ -8,8 +8,8 @@
 
 #addlocationbutton {
   position: absolute;
-  bottom: 110px; // media query
-  left: 175px; // media query
+  bottom: 40px; // media query
+  left: 179px; // media query
   border: solid;
   border-radius: 50%;
   background-color: yellow;
@@ -43,7 +43,7 @@
 .mapboxgl-ctrl-geocoder {
   height: 55px;
   min-width: 90vw !important;
-  margin-left: 8px;
+  margin-left: 21px; // media query
 
   input[type='text'] {
     font-size: 18px !important;
@@ -57,4 +57,12 @@
     left: 10px;
 }
 
+.mapboxgl-popup-content {
+  padding: 3px 12px !important;
+  max-width: 250px;
+  h2 {
+    margin: 2px 0px 8px 0px !important;
+    line-height: 0.7 !important;
+  }
+}
 

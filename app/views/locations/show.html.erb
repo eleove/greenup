@@ -1,4 +1,22 @@
-<h1>Locations#show</h1>
-<p>Find me in app/views/locations/show.html.erb</p>
+<h1> Lieu : <%= @location.name %> </h1>
 
-<%= @location.name %>
+<h2> Description </h2>
+<p> <%= @location.description %> </p>
+
+<%= cl_image_tag @location.photo, height: 300, width: 400, crop: :fill %>
+
+<h2> Type de déchets présents </h2>
+<ul>
+  <% @location.garbage.each do |g| %>
+    <li> <%= g %> </li>
+  <% end %>
+</ul>
+
+<h2> Evènement </h2>
+<% if @location.event %>
+  <%= link_to 'Rejoins l\'évènement !', event_path(@location.event), class: "btn btn-primary" %>
+<% else %>
+  <p> Pas d'évènement pour l'instant </p>
+  <%= link_to 'Créer un évènement', new_location_event_path(@location), class: "btn btn-primary" %>
+<% end %>
+

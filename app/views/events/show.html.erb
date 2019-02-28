@@ -1,2 +1,24 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h1> Rejoindre l'évènement </h1>
+<h2> <%= @event.name %> </h2>
+
+<h3> Date et heure : <%= l(@event.schedule, format: '%e %B %Y') %> </h3>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<p> <%= @event.event_participants.length %> participant(s) pour cet évènement </p>
+<% if %>
+<%= current_user.id %>
+
+<p> TODO : Participer / se désinscrire </p>
+<% end %>
+<p> TODO : Twitter cet évènement </p>
+<p> TODO : Partager cet évènement sur Facebook </p>
+
+
+<!--
+SHOW Page d'évent : bouton partager Twitter / Fb, participer/se désinscrire, nb et liste des participants, organisateur, photo, date et heure (début et fin) -->

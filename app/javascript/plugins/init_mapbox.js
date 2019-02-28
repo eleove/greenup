@@ -32,6 +32,8 @@ const initMapbox = () => {
         .setLngLat([ marker.long, marker.lat ])
         .setPopup(popup)
         .addTo(map)
+      // let content = document.querySelector('.mapboxgl-popup-content > h2')
+      // content.setContent(content.getContent());
     });
     // map.addControl(new mapboxgl.NavigationControl());
     document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
