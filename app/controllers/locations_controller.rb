@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
+
   def index
     @locations = Location.where.not(latitude: nil, longitude: nil)
     @markers = @locations.map do |location|
@@ -29,6 +31,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    @location.garbage.shift # à régler : le premier string de l'array est vide // input hidden ?
   end
 
   def edit
@@ -43,6 +46,7 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:name, :description, :lat, :long, :photo)
+    params.require(:location).permit(:name, :description, :lat, :long, :photo, garbage:[])
+    # bien rajouter :[] à la colmun qui est un array
   end
 end

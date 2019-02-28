@@ -1,29 +1,34 @@
-<h2>Sign up</h2>
+<h2> S'inscrire </h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :username,
+                label: 'Ton nom complet ou ton pseudo',
+                required: true %>
     <%= f.input :email,
+                label: 'Ton email',
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "Ton email" }%>
     <%= f.input :password,
+                label: 'Ton mot de passe',
                 required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: 'Confirme ton mot de passe',
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "C'est parti !" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
-hhhh
 
 <br>
 <br>
