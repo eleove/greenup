@@ -1,28 +1,36 @@
-<h2> Se connecter </h2>
+<h2>Se connecter</h2>
 
-<%= link_to(user_google_oauth2_omniauth_authorize_path) do %>
-  <p class="btn btn-danger google-btn">
-    <img src="https://img.icons8.com/small/64/000000/google-logo.png" style="height: 20px"> </img> Se connecter avec Google
-  </p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+      <div class="formulaire">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-inputs"><br>
+            <%= link_to(user_google_oauth2_omniauth_authorize_path) do %>
+              <p class="btn btn-danger google-btn">
+                <img src="https://img.icons8.com/small/64/000000/google-logo.png" style="height: 20px"> </img> Connexion avec Google
+              </p>
+            <% end %>
+            <%= f.input :email,
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+            <%= f.input :password,
+                        label: "Mot de passe",
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+          <div id="forgotpass">
+            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+              <%= link_to "Mot de passe oublié", new_password_path(resource_name) %><br />
+            <% end %>
+          </div>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Se connecter", :class => 'btn-success col-xs-10 seconnecter' %><% end %>
+        </div><br>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                label: 'Ton email',
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                label: 'Ton mot de passe',
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Connexion" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
