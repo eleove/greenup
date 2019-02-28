@@ -1,0 +1,128 @@
+h2 {
+  font-size: 25px;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #303030;
+
+}
+
+label h2 p {
+  color: #182761;
+}
+
+label {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.logingoogle {
+  width: 200px;
+}
+
+label {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+::placeholder {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+body.background-island {
+  background-image: url(isle-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+footer {
+  background-color: white;
+}
+
+#island_photo {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+#creerbutton {
+  margin-bottom: 70px;
+}
+
+body.background-connection {
+  background-image: url(beach7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  height: 100%;
+}
+
+body.background-signup {
+  background-image: url(palmier.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+body.background-password {
+  background-image: url(islandpassword.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.formulaire a {
+  padding-top: 10px;
+  color: #3C7691;
+  font-size: 17px;
+}
+
+#remember_meme label{
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+#user {
+  width: 20px;
+}
+
+.google-btn {
+  width: 100%;
+}
+
+#signup {
+  padding-top: 18px;
+  padding-bottom: 135px;
+  p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+
+#forgotpass {
+  padding-bottom: 30px;
+}
+
+.seconnecter {
+  width: 100%;
+}
+
+// form email
+
+.emailsend {
+  margin-top: 20px;
+}
+
+.dejauncompte {
+  padding: 20px 0;
+  padding-bottom: 350px;
+  p {
+    font-size: 17px;
+  }
+}

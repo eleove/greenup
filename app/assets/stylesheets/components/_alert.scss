@@ -6,10 +6,17 @@
   margin: 0;
   text-align: center;
   color: white;
+  position: absolute;
+  opacity: 0.8;
+  width: 100%;
 }
 .alert-info {
   background: $green;
 }
 .alert-warning {
   background: $red;
+}
+
+.alert-danger {
+  display: none;
 }

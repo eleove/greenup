@@ -1,18 +1,31 @@
-<h2>Forgot your password?</h2>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
+<h2>Mot de passe</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+      <div class="formulaire">
+          <div class="form-inputs emailsend">
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Réintialiser mon mot de passe", :class => 'btn-success col-xs-10 seconnecter' %>
+          </div>
+        <% end %>
+
+        <div class="dejauncompte">
+          <p>Déjà un compte ? <%- if controller_name != 'sessions' %>
+            <%= link_to "Se connecter", new_session_path(resource_name) %><br />
+          <% end %></p>
+        </div>
+
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

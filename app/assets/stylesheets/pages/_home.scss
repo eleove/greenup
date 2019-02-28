@@ -87,3 +87,9 @@ body {
   font-size: 18px;
   padding-right: 10px;
 }
+
+@media screen {
+    h1, h2 {
+      text-align: center;
+    }
+}
