@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
   belongs_to :location
+  belongs_to :user
   has_many :event_participants, dependent: :destroy
-  validates :name, presence: true
+  has_many :users, through: :event_participants
+  # validates :name, presence: true
   validates :schedule, presence: true
 end
