@@ -11,40 +11,51 @@ User.destroy_all
 
 user1 = User.create!(
   email: 'frdutheil@hyahoo.fr',
-  password: '123456',
-  username: 'François Dutheil'
+  password: 'password',
+  username: 'François Dutheil',
+  points: 12,
+  avatar: "myAvatar5.png"
   )
 
 user2 = User.create!(
   email: 'eleonore.breton@hec.edu',
   password: 'password',
-  username: 'Eléonore Breton'
+  username: 'Eléonore Breton',
+  points: 252,
+  avatar: "myAvatar3.png"
   )
 
+
 user3 = User.create!(
-  email: 'momo.latulipe@gmail.com',
+  email: 'bigcrado@gmail.com',
   password: '125688',
-  username: 'Momo Latulipe'
+  username: 'Richard Crado',
+  points: 3,
+  avatar: "myAvatar2.png"
   )
 
 user4 = User.create!(
-  email: 'pepe.lemoko@gmail.com',
-  password: '3256777',
-  username: 'Pepe LeMoko',
+  email: 'Ginette.paspropre@gmail.com',
+  password: 'password',
+  username: 'Ginette Paspropre',
+  points: 2,
+  avatar: "myAvatar.png"
   )
 
 
 user5 = User.create!(
   email: 'carolinemarie.girard@gmail.com',
   password: '579222',
-  username: 'Caroline Girard'
+  username: 'Caroline Girard',
+  points: 253,
+  avatar: "myAvatar4.png"
   )
 
 location1 = Location.create!(
   name: 'Annecy',
   latitude: 45.899246,
   longitude: 6.129384,
-  user: user1
+  user: user4
   )
 
 location1.remote_photo_url = 'https://ak8.picdn.net/shutterstock/videos/13446458/thumb/1.jpg?i10c=img.resize(height:160)'
@@ -54,7 +65,7 @@ location2 = Location.create!(
   name: 'Bois-le-Roi',
   latitude: 48.475479,
   longitude: 2.693954,
-  user: user2
+  user: user4
   )
 
 location2.remote_photo_url = 'https://ak5.picdn.net/shutterstock/videos/5101895/thumb/1.jpg?i10c=img.resize(height:160)'
@@ -84,7 +95,7 @@ location5 = Location.create!(
   name: 'Le Riousset Valence',
   latitude: 44.8642903,
   longitude: 5.0267602,
-  user: user5
+  user: user3
   )
 
 location5.remote_photo_url = 'https://ak2.picdn.net/shutterstock/videos/9792092/thumb/1.jpg?i10c=img.resize(height:160)'

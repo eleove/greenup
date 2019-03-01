@@ -1,12 +1,11 @@
 .avatarbanner {
-  background-color: red;
-  height: 20vh;
+  // background-color: red;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  align-items:center;
   margin-right: 10px;
   margin-left: 10px;
+  height: 200px;
 }
 
 .profile-pict {
@@ -16,24 +15,15 @@
 
 }
 
-.row {
-
-}
-
-
 .infos-user {
  display: flex;
 margin: 0 auto;
 }
 
 
-.card {
- height: 300px;
-}
-
 
 .ma-bio {
-  background-color: green;
+  // background-color: green;
   width: 35%;
   margin-right: 10px;
   margin-left: 5px;
@@ -42,10 +32,25 @@ margin: 0 auto;
 
 
 .mes-points {
-  background-color: yellow;
   width: 55%;
   margin-left: 10px;
   margin-right: 5px;
+  font-size: 12px;
 
 }
 
+.truc {
+  background-color: rgba(178, 33, 54, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+.pseudo {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-color: #182761;
+  font-weight: lighter;
+}
