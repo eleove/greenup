@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_104743) do
+ActiveRecord::Schema.define(version: 2019_03_01_102033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,9 @@ ActiveRecord::Schema.define(version: 2019_02_28_104743) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["location_id"], name: "index_events_on_location_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -67,5 +69,6 @@ ActiveRecord::Schema.define(version: 2019_02_28_104743) do
   add_foreign_key "event_participants", "events"
   add_foreign_key "event_participants", "users"
   add_foreign_key "events", "locations"
+  add_foreign_key "events", "users"
   add_foreign_key "locations", "users"
 end
