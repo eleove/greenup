@@ -2,7 +2,7 @@
   <%= render 'shared/error_messages', object: f.object %>
   <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible" %>
   <%= f.input :description, placeholder: "Décrivez l'emplacement"%>
-  <%= f.input :garbage, as: :check_boxes, collection: [['Verre', 'Verre'], ['Electroménager', 'Electroménager'], ['Vêtements', 'Vêtements'], ['Déchets industriels', 'Déchets industriels'], ['Métal', 'Métal']] %>
+  <%= f.input :garbage, label: 'Type de déchets présents', as: :check_boxes, collection: [['Verre', 'Verre'], ['Electroménager', 'Electroménager'], ['Vêtements', 'Vêtements'], ['Déchets industriels', 'Déchets industriels'], ['Métal', 'Métal']] %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <input type="hidden" name="lat" id="lat">
@@ -10,6 +10,4 @@
 
   <%= f.submit "Créer", class: "btn btn-block btn-success" %>
 <% end %>
-
-<p> <em> NB: veuillez bien autoriser votre position </em> </p>
 

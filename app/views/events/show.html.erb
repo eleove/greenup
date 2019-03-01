@@ -1,24 +1,37 @@
 <h1> Rejoindre l'évènement </h1>
-<h2> <%= @event.name %> </h2>
-
-<h3> Date et heure : <%= l(@event.schedule, format: '%e %B %Y') %> </h3>
 
 
+<h2> <%= l(@event.schedule, format: '%A %e %B %Y') %> </h2>
+<!-- <p> <%= @event.name %> </p> -->
 
-<br>
-<br>
+
 <br>
 <br>
 
 <p> <%= @event.event_participants.length %> participant(s) pour cet évènement </p>
-<% if %>
-<%= current_user.id %>
-
+<% if current_user.id == @event.user_id %>
+<p> Vous êtes le créateur de cet évènement </p>
+<% else  %>
+<p> Evènement créé par <%= @event.user.username %> (RAJOUTER AVATAR) </p>
 <p> TODO : Participer / se désinscrire </p>
+<p> Test si le current user participe : <%= @event.users.include?(current_user) %> </p>
 <% end %>
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.2&appId=414892035984987&autoLogAppEvents=1"></script>
+
+<div class="fb-share-button" data-href="http://toto.com" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftoto.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager</a></div>
+
+<br>
+<br>
+
 <p> TODO : Twitter cet évènement </p>
 <p> TODO : Partager cet évènement sur Facebook </p>
 
 
 <!--
 SHOW Page d'évent : bouton partager Twitter / Fb, participer/se désinscrire, nb et liste des participants, organisateur, photo, date et heure (début et fin) -->
+
+<!--
+<p> Current user : <%= current_user.username %> (id : <%= current_user.id  %>) </p>
+<p> Créateur de l'event : <%= @event.user.username %> (id : <%= @event.user_id %>) </p>
+-->

@@ -7,38 +7,38 @@
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
 
-<div class="form-inputs">
-    <%= f.input :username,
-                label: 'Ton nom complet ou ton pseudo',
-                required: true %>
-    <%= f.input :email,
-                label: 'Ton email',
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "Ton email" }%>
-    <%= f.input :password,
-                label: 'Ton mot de passe',
-                required: true,
-                hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                label: 'Confirme ton mot de passe',
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
-
-  <div class="form-actions">
-              <%= f.button :submit, "S'inscrire", :class => 'btn-success col-xs-10 seconnecter' %>
-            </div>
-          <% end %>
-          <div class="dejauncompte">
-            <p>Déjà un compte ? <%- if controller_name != 'sessions' %>
-              <%= link_to "Se connecter", new_session_path(resource_name) %><br />
-            <% end %></p>
+          <div class="form-inputs">
+            <%= f.input :username,
+                        label: 'Ton nom complet ou ton pseudo',
+                        required: true %>
+            <%= f.input :email,
+                        label: 'Ton email',
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "Ton email" }%>
+            <%= f.input :password,
+                        label: 'Ton mot de passe',
+                        required: true,
+                        hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        label: 'Confirme ton mot de passe',
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
           </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "S'inscrire", :class => 'btn-success col-xs-10 seconnecter' %>
+          </div>
+        <% end %>
+        <div class="dejauncompte">
+          <p>Déjà un compte ? <%- if controller_name != 'sessions' %>
+            <%= link_to "Se connecter", new_session_path(resource_name) %><br />
+          </p>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <%= render "devise/shared/links" %>
