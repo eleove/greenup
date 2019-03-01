@@ -11,6 +11,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @location = Location.find(params[:location_id])
     @event.location = @location
+    @event.user = current_user
     if @location.save
       # CHANGER LA REDIRECTION
       redirect_to locations_path, notice: 'Success'
