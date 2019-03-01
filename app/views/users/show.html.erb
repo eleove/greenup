@@ -2,17 +2,22 @@
 <div class="container">
 
   <div class="row avatarbanner">
-    <%= image_tag "myAvatar.png", class:"profile-pict" %>
+    <div class="col-sm-6"> <%= image_tag @user.avatar, class:"profile-pict" %>
+    </div>
+    <div class="card mes-points col-sm-6">
+      <div class="pseudo">
+        <%= @user.username %>
+      </div>
+      <div class="truc">
+        Points : <%= @user.points %>
+      </div>
+    </div>
   </div>
 
   <div class="row infos-user">
-    <div class="card mes-points">
-      <div class="well"><%= @user.username %></div>
-      <div class="well">B</div>
-      <div class="well">C</div>
-    </div>
-    <div class="card ma-bio">
-      <p>B</p>
+
+    <div class="card ma-bio col-sm-12">
+      <p> <%= @user_id.event_id.length %> </p>
     </div>
   </div>
 </div>
