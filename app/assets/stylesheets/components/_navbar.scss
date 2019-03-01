@@ -40,6 +40,7 @@
 
 
 //navbar sur le menu
+
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
   height: 10px;
@@ -52,4 +53,6 @@
   border-right: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
-
+li {
+  margin: 14px;
+}
