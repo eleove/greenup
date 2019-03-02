@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> GREEN UP </title>
+    <title> Green Up </title>
+    <meta property="og:title" content="Green Up, pour une nature sans déchets" />
+    <meta property="og:description" content="Se réunir pour identifier et aller nettoyer les décharges sauvages" />
+    <meta property="og:url" content="https://green-up.herokuapp.com/" />
+    <meta property="og:image" content="logo.png" />
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -12,6 +16,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.css' type='text/css' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <%= favicon_link_tag asset_path('curseurmap.png') %>
   </head>
   <body>
     <%= render 'shared/navbar' %>
