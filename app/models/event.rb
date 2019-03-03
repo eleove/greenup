@@ -5,4 +5,5 @@ class Event < ApplicationRecord
   has_many :users, through: :event_participants
   # validates :name, presence: true
   validates :schedule, presence: true
+  validates :location, presence: true, uniqueness: true
 end

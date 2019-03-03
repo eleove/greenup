@@ -1,6 +1,6 @@
 <%= simple_form_for @location do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible" %>
+  <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible (ville à proximité, point d'intérêt, etc." %>
   <%= f.input :description, placeholder: "Décrivez l'emplacement"%>
   <%= f.input :garbage, label: 'Type de déchets présents', as: :check_boxes, collection: [['Verre', 'Verre'], ['Electroménager', 'Electroménager'], ['Vêtements', 'Vêtements'], ['Déchets industriels', 'Déchets industriels'], ['Métal', 'Métal']] %>
   <%= f.input :photo %>

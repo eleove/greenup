@@ -1,6 +1,5 @@
 <%= simple_form_for [@location, @event] do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.input :name, label: "Description de l'évènement", placeholder: "Lieu - date - heure" %>
   <%= f.input :schedule, label: 'Date et heure de début', as: :string, start_year: Date.today.year, end_year: Date.today.year + 2, order: [:day, :month, :year] %>
   <%= f.submit "Créer", class: "btn btn-block btn-success" %>
 <% end %>
