@@ -1,7 +1,7 @@
 <h1>Les évènements</h1>
 
 <% @events.each do |event| %>
-  <p> <%= event.location %> </p>
-  <p> <%= event.schedule %> </p>
-  <p> <%= event.user %> </p>
+  <p> <%= event.location.name %> </p>
+  <p> <%= l(event.schedule, format: '%A %e %B %Y') %> </p>
+  <p> <%= event.user.username %> </p>
 <% end %>
