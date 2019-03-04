@@ -3,3 +3,9 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+.main-container {
+  // 70px = navbar height, 40px = footer height, 40px = footer margin-top
+  // min-height: calc(100vh - 70px - 40px - 40px);
+  min-height: calc(100vh - #{$navbarheight} - #{$footerheight} - 40px)
+}

@@ -32,8 +32,11 @@
           </div>
         <% end %>
         <div class="dejauncompte">
-          <p>Déjà un compte ? <%- if controller_name != 'sessions' %>
-            <%= link_to "Se connecter", new_session_path(resource_name) %><br />
+          <p>Déjà un compte ?
+            <% if controller_name != 'sessions' %>
+              <%= link_to "Se connecter", new_session_path(resource_name) %>
+              <br/>
+            <% end %>
           </p>
         </div>
       </div>
