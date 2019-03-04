@@ -1,0 +1,86 @@
+.nouvelemplacement {
+  color: #182761;
+  h1 {
+    margin: 25px 0 !important;
+    max-width: 100% !important;
+    font-size: 22px !important;
+    margin-top: 35px !important;
+  }
+
+  em {
+    margin-left: 22px;
+    color: red;
+  }
+
+  .checkboxinput {
+    color: #182761;
+    input {
+      font-size: 15px;
+      -webkit-transform: scale(1.5);
+      padding-left: 20px;
+    }
+    label {
+      padding-left: 20px;
+      color: #182761;
+    }
+
+  }
+
+  legend {
+    font-size: 18px;
+    color: #182761;
+  }
+
+
+  .photocase {
+    border: solid 2px black;
+  }
+
+  .form-check {
+    padding-left: 20px;
+  }
+
+  .buttonphoto {
+    padding-left: 10px;
+    margin: 0;
+    input {
+      font-size: 10px;
+      text-align: center;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-top: 10px;
+      margin: 0;
+
+    }
+
+    a {
+      color: blue;
+    }
+    label {
+      padding-left: 0;
+      color: #182761;
+    }
+  }
+
+
+  #location_photo {
+    input {
+      size: 20px;
+    }
+  }
+}
+
+input#location_photo::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+input#location_photo::before {
+    color: blue !important;
+    content: "Choisir un fichier";
+    color: black;
+    padding-left: 8px;
+}
+
+label {
+  color: #182761;
+}
