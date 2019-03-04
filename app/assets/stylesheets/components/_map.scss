@@ -8,18 +8,24 @@
 
 #addlocationbutton {
   position: absolute;
-  bottom: 40px; // media query
-  left: 179px; // media query
-  border: solid;
+  bottom: 5%;
+  left: 40%;
+  right: 40%;
   border-radius: 50%;
-  background-color: yellow;
-  color: black;
+  background-color: rgba(24, 39, 97, 0.8);
+  color: white;
   font-size: 32px;
-  padding: 5px;
   height: 60px;
   width: 60px;
   text-align: center;
   z-index: 2;
+  padding: 2%;
+}
+
+#addlocationbutton:hover {
+  text-decoration: none;
+  background-color: rgba(24, 39, 97, 0.5);
+  color: rgba(24, 39, 97, 0.8);
 }
 
 // .mapboxgl-ctrl-geocoder {

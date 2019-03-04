@@ -1,6 +1,11 @@
 // Specific CSS for your home-page
 body {
   font-size: 23px;
+  color: #182761;
+  p {
+    font-size: 15px !important;
+    text-align: justify !important;
+  }
 
   h3 {
     font-size: 20px;
@@ -24,7 +29,6 @@ body {
   //  padding-bottom: 0;
   //}
   h2 {
-    // position: absolute;
     margin-top: 0px;
     font-size: 25px;
     padding: 30px;
@@ -32,29 +36,29 @@ body {
     top: 95px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.9);
+    left: 10%;
+    right: 10%;
   }
   .btn {
     position: absolute;
-    top: 380px;
+    top: 50%;
     color: white;
     background-color: #B22136;
-    font-size: 14px;
-    padding: 14px 19px;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px 18px;
     margin-bottom: 50px;
     border-radius: 30px;
-    right: 100px;
-    left: 100px;
+    right: 20%;
+    left: 20%;
   }
 }
 
 .questcequegreenup {
   z-index: 2;
   background-image: image-url("pi.png");
-  background-size: 130px;
+  background-size: 35%;
   background-repeat: no-repeat;
-  margin: 0;
-  font-size: 15px;
-  text-align: justify;
   padding: 20px 60px;
   background-position: 210px 50px;
   color: #111C46;
@@ -68,19 +72,18 @@ body {
     height: 31.5vh;
     display: block;
     margin: 0 auto;
-    min-width: 100%;
+    max-width: 100%;
   }
   h3 {
     position: absolute;
-    bottom: 55px;
+    bottom: 20%;
     right: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
-    margin: 30px;
+    margin: 10%;
     border-radius: 5px;
     color: #B22136;
-    font-size: 16px;
   }
 }
 
@@ -89,8 +92,3 @@ body {
   padding-right: 10px;
 }
 
-@media screen {
-    h1, h2 {
-      text-align: center;
-    }
-}
