@@ -4,4 +4,12 @@
   font-size: 12px;
   padding: 5px;
   margin-top: 40px;
+  height: $footerheight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0 !important;
+  }
 }
