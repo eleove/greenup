@@ -1,7 +1,6 @@
 // Specific CSS for your home-page
 body {
   font-size: 23px;
-  color: #182761;
   p {
     font-size: 15px !important;
     text-align: justify !important;
@@ -16,32 +15,24 @@ body {
 }
 
 .banner {
+  position: relative;
   margin-bottom:0;
   background-image: image-url("greenup.png");
   background-size: cover;
   height: 55vh;
-
-  //video{
-  //  min-width: 100%;
-  //  min-height: 60vh;
-  //  position: relative;
-  //  z-index: -100;
-  //  padding-bottom: 0;
-  //}
   h2 {
-    margin-top: 0px;
-    font-size: 25px;
-    padding: 30px;
+    position: absolute;
+    padding-top: 30px;
     text-align: center;
-    top: 95px;
+    top: 70px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9)!important;
     left: 10%;
     right: 10%;
   }
   .btn {
     position: absolute;
-    top: 50%;
+    bottom: 10%;
     color: white;
     background-color: #B22136;
     font-size: 12px;
