@@ -14,7 +14,9 @@ user1 = User.create!(
   password: 'password',
   username: 'François Dutheil',
   points: 12,
-  avatar: "myAvatar5.png"
+  avatar: "myAvatar5.png",
+  bio: "I like to participate to massive waste collects with all my mates.
+  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
   )
 
 user2 = User.create!(
@@ -22,16 +24,20 @@ user2 = User.create!(
   password: 'password',
   username: 'Eléonore Breton',
   points: 252,
-  avatar: "myAvatar3.png"
+  avatar: "myAvatar3.png",
+  bio: "I like to participate to massive waste collects with all my mates.
+  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
   )
 
 
 user3 = User.create!(
   email: 'bigcrado@gmail.com',
-  password: '125688',
+  password: 'password',
   username: 'Richard Crado',
   points: 3,
-  avatar: "myAvatar2.png"
+  avatar: "myAvatar2.png",
+  bio: "I like to participate to massive waste collects with all my mates.
+  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
   )
 
 user4 = User.create!(
@@ -39,16 +45,20 @@ user4 = User.create!(
   password: 'password',
   username: 'Ginette Paspropre',
   points: 2,
-  avatar: "myAvatar.png"
+  avatar: "myAvatar.png",
+  bio: "I like to participate to massive waste collects with all my mates.
+  All the protection of environment is a fair question. I would like a better world, clean and happy. Join GreenUp team !"
   )
 
 
 user5 = User.create!(
   email: 'carolinemarie.girard@gmail.com',
-  password: '579222',
+  password: 'password',
   username: 'Caroline Girard',
   points: 253,
-  avatar: "myAvatar4.png"
+  avatar: "myAvatar4.png",
+  bio: "I like to particpate to massive waste collects with all my mates.
+  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
   )
 
 location1 = Location.create!(

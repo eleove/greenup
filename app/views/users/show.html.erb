@@ -1,5 +1,6 @@
 
 <div class="container">
+
   <div class="row avatarbanner">
     <div class="col-sm-6"> <%= image_tag @user.avatar, class:"profile-pict" %>
     </div>
@@ -15,12 +16,26 @@
 
   <div class="infos-user">
     <div class="card mes-participations">
+      <div class="carte">
         <span><%= @user.event_participants.count  %></span>
         <p>participations</p>
+
+      </div>
     </div>
     <div class="card mes-evenements">
+      <div class="carte">
         <span><%= @user.events.count %></span>
       <p>évènements</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="bio-user">
+    <div class="card">
+      <h3> Ma bio </h3>
+      <p>
+        <%= @user.bio  %>
+      </p>
     </div>
   </div>
 </div>
