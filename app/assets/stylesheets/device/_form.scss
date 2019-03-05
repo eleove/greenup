@@ -24,6 +24,11 @@ label {
 
 .btn {
   margin-bottom: 20px;
+  border: 3px solid #FF512F;
+  font-weight: bold;
+  background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body.background-island {

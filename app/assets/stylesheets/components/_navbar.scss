@@ -1,7 +1,7 @@
 /* Main navbar */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
   height: $navbarheight;
   padding: 0px 30px;
@@ -11,10 +11,12 @@
 
 }
 
+.navbarhome {
+  font-size: 23px;
+}
+
 /* Logo */
 .navbar-wagon-brand img {
-  position: absolute;
-  right: 45%;
   top: 10px;
 }
 
