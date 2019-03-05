@@ -13,6 +13,8 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :username, presence: true
 
+  after_create :send_welcome_email
+
   def self.from_omniauth(access_token)
       data = access_token.info
       user = User.where(email: data['email']).first
@@ -27,5 +29,11 @@ class User < ApplicationRecord
           )
       end
       user
+  end
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
   end
 end
