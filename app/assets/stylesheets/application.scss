@@ -3,6 +3,8 @@
 @import "config/colors";
 @import "config/bootstrap_variables";
 @import "config/main_tags";
+@import "config/main_variables";
+
 
 // External libraries
 @import "bootstrap-sprockets";
@@ -16,3 +18,4 @@
 @import "pages/index";
 @import "device/index";
 @import "components/map";
+@import "location/index";

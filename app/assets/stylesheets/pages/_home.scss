@@ -1,6 +1,8 @@
 // Specific CSS for your home-page
 body {
-  font-size: 23px;
+  .justified {
+    text-align: justify !important;
+  }
 
   h3 {
     font-size: 20px;
@@ -11,49 +13,41 @@ body {
 }
 
 .banner {
+  position: relative;
   margin-bottom:0;
   background-image: image-url("greenup.png");
   background-size: cover;
   height: 55vh;
-
-  //video{
-  //  min-width: 100%;
-  //  min-height: 60vh;
-  //  position: relative;
-  //  z-index: -100;
-  //  padding-bottom: 0;
-  //}
   h2 {
     position: absolute;
-    font-size: 25px;
-    padding: 30px;
+    padding-top: 30px;
     text-align: center;
-    top: 95px;
+    top: 70px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.9)!important;
+    left: 10%;
+    right: 10%;
   }
   .btn {
     position: absolute;
-    top: 380px;
+    bottom: 10%;
     color: white;
     background-color: #B22136;
-    font-size: 14px;
-    padding: 14px 19px;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px 18px;
     margin-bottom: 50px;
     border-radius: 30px;
-    right: 100px;
-    left: 100px;
+    right: 20%;
+    left: 20%;
   }
 }
 
 .questcequegreenup {
   z-index: 2;
   background-image: image-url("pi.png");
-  background-size: 130px;
+  background-size: 35%;
   background-repeat: no-repeat;
-  margin: 0;
-  font-size: 15px;
-  text-align: justify;
   padding: 20px 60px;
   background-position: 210px 50px;
   color: #111C46;
@@ -67,19 +61,18 @@ body {
     height: 31.5vh;
     display: block;
     margin: 0 auto;
-    min-width: 100%;
+    max-width: 100%;
   }
   h3 {
     position: absolute;
-    bottom: 55px;
+    bottom: 20%;
     right: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
-    margin: 30px;
+    margin: 10%;
     border-radius: 5px;
     color: #B22136;
-    font-size: 16px;
   }
 }
 
@@ -88,8 +81,3 @@ body {
   padding-right: 10px;
 }
 
-@media screen {
-    h1, h2 {
-      text-align: center;
-    }
-}

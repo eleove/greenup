@@ -12,6 +12,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  border: 1.5px solid rgba(178, 33, 54, 0.8);
 
 }
 
@@ -22,6 +23,7 @@
  text-align: center;
  grid-column-gap: 10%;
 }
+
 
 
 
@@ -41,7 +43,18 @@
   background-color: rgba(255, 255, 255, 0.9);
   padding: 30px 0;
 
+
+.ma-bio {
+  background-color: rgba(178, 33, 54, 0.8);
+  color: rgba(178, 33, 54, 0.8);
+  padding: 20px 30px;
+  border-radius: 3px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
 }
+
 
 
 .mes-points {
@@ -62,10 +75,10 @@
 }
 
 .pseudo {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
-  font-color: #182761;
   font-weight: lighter;
+  color: #182761;
 }
 
 .machintruc {
