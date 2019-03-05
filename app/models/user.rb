@@ -31,6 +31,10 @@ class User < ApplicationRecord
       user
   end
 
+  def password_required?
+    false
+  end
+
   private
 
   def send_welcome_email
