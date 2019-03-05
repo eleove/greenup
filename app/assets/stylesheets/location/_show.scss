@@ -1,10 +1,51 @@
 .lieu {
+  background-image: url(stardust.png);
+  background-repeat: repeat;
+  position: relative;
+  img {
+    opacity: 0.8;
+    z-index: 1;
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    top: 27%;
+    color: white !important;
+    font-weight: bold;
+    z-index: 3;
+    text-shadow: 2px 2px 5px black;
+    right: 0;
+    left: 0;
+  }
+}
+
+.bodylieu {
+  background-size: cover;
   padding: 0 20px;
+
   h2 {
     text-align: left;
 
   }
   img {
     max-width: 100%;
+    opacity: 0.8;
+    background-color: red;
   }
 }
+
+//
+
+#i-have-a-tooltip {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 11%;
+  margin: 5% auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+

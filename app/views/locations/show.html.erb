@@ -1,32 +1,40 @@
 <div class="lieu">
-  <h1> Lieu : <%= @location.name %> </h1>
-
-  <h2> Description </h2>
-  <% if !@location.description || @location.description.blank? %>
-    <p> <em> Pas de description </em> </p>
-  <% else %>
-    <p> <%= @location.description %> </p>
-  <% end %>
+  <h1><%= @location.name %> </h1>
 
   <%= cl_image_tag @location.photo, height: 300, width: 400, crop: :fill if !@location.photo.blank? %>
 
-  <h2> Type de déchets présents </h2>
-  <% if @location.garbage.empty? %>
-    <p> <em> Aucun déchet indiqué </em> </p>
-  <% else %>
-    <ul>
-      <% @location.garbage.each do |g| %>
-        <li> <%= g %> </li>
+  <div class="bodylieu">
+    <h2> Description </h2>
+    
+    <div id="i-have-a-tooltip" data-description="I'm a tooltip!">
+      <% if !@location.description || @location.description.blank? %>
+        <p> <em> Pas de description </em> </p>
+      <% else %>
+        <p> <%= @location.description %> </p>
       <% end %>
-    </ul>
-  <% end %>
+    </div>
 
-  <h2> Evènement </h2>
-  <% if @location.event %>
-    <%= link_to 'Rejoins l\'évènement !', event_path(@location.event), class: "btn btn-primary center-block" %>
-  <% else %>
-    <p> Pas d'évènement pour l'instant </p>
-    <%= link_to 'Créer un évènement', new_location_event_path(@location), class: "btn btn-primary center-block" %>
-  <% end %>
+    <h2> Type de déchets présents </h2>
+    <div id="i-have-a-tooltip" data-description="I'm a tooltip!">
+      <% if @location.garbage.empty? %>
+        <p> <em> Aucun déchet indiqué </em> </p>
+      <% else %>
+      <ul>
+        <% @location.garbage.each do |g| %>
+          <li> <%= g %> </li>
+        <% end %>
+      </ul>
+    <% end %>
+    </div>
+
+    <h2> Evènement </h2>
+    <% if @location.event %>
+      <%= link_to 'Rejoins l\'évènement !', event_path(@location.event), class: "btn btn-primary center-block" %>
+    <% else %>
+      <p> Pas d'évènement pour l'instant </p>
+      <%= link_to 'Créer un évènement', new_location_event_path(@location), class: "btn btn-primary center-block" %>
+    <% end %>
+  </div>
+
 </div>
 

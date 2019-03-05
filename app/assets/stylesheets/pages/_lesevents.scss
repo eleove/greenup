@@ -1,125 +1,47 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-// clear-fix mixin
-@mixin cf {
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-  }
-  &::after {
-    clear: both;
-  }
-}
-.row {
-  max-width: 900px;
-  margin: 0px auto 0;
-}
-
-// Base styles
-.card {
-  float: left;
-  padding: 0 1.7rem;
-  width: 100%;
-  .menu-content {
-    @include cf;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    li {
-      display: inline-block;
-    }
-    a {
-      color: white;
-    }
-    span {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      font-size: 10px;
-      font-weight: 700;
-      font-family: 'Open Sans';
-      transform: translate(-50%, 0);
-    }
-  }
-  .wrapper {
-    background-color: white;
-    min-height: 540px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 19px 38px rgba(black, 0.3), 0 15px 12px rgba(black, 0.2);
-  }
-  .data {
-    padding: 30px 20px;
-  }
-  .author {
-    font-size: 12px;
-  }
-  .title {
-    margin-top: 10px;
-  }
-  .text {
-    height: 70px;
-    margin: 0;
-  }
-  input[type='checkbox'] {
-    display: none;
-  }
-  input[type='checkbox']:checked + .menu-content {
-    transform: translateY(-60px);
-  }
-}
-
-
-// Second
-.example-2 {
-  .wrapper {
-    //background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center / cover no-repeat;
-
-  }
-  .header {
-    @include cf;
-    color: white;
-    padding: 1em;
-    .date {
-      float: left;
-      font-size: 12px;
-    }
-  }
-  .menu-content {
-    float: right;
-    li {
-      margin: 0 5px;
-      position: relative;
-    }
-    span {
-      transition: all 0.3s;
-      opacity: 0;
-    }
-  }
-  .data {
-    color: white;
-    transform: translateY(calc(70px + 4em));
-  }
-  .title {
-    a {
-      color: white;
-    }
-  }
-  .button {
-    display: block;
-    width: 100px;
-    margin: 2em auto 1em;
-    text-align: center;
-    font-size: 12px;
-    color: white;
-    line-height: 1;
-    position: relative;
-    font-weight: 700;
-  }
-}
-
 .lesevents {
-  p, em, label, h2 {
-    color: white !important;
+  h1 {
+  }
+  a {
+    font-size: auto;
+  }
+  .la {
+    margin: 20px;
+    position: relative;
+    box-shadow: 1px 0px 12px gray;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    img {
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .bodycard {
+    .btn {
+      margin: 0;
+    }
+    padding: 0 20px;
+    h4 {
+      padding: 5px;
+      padding-bottom: 20px;
+      font-size: 18px;
+      padding: 0;
+      color: #182761 !important;
+
+    }
+    p {
+      padding: 0 !important;
+
+    }
+
+    .i {
+
+      padding: 2%;
+    }
+
+    p.card-text {
+        padding: 10px;
+      }
   }
 }
