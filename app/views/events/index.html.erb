@@ -1,29 +1,16 @@
 <div class="lesevents">
   <h1>Liste des évènements</h1>
-  <div class="row">
-    <% @events.each do |event| %>
-    <div class="example-2 card">
-      <div class="wrapper">
-        <%= cl_image_tag event.location.photo, height: 300, width: 400, crop: :fill %>
-        <div class="header">
-          <div class="date">
-              <p> <%= l(event.schedule, format: '%A %e %B %Y') %> </p>
-          </div>
-        </div>
-        <div class="data">
-          <div class="content">
-            <span class="author">Jane Doe</span>
+  <% @events.each do |event| %>
+    <div class="card la" >
+      <div class="card-img-top">
+        <%= cl_image_tag event.location.photo, height: 200, width: 300, crop: :fill %>
+      </div>
+      <div class="card-body bodycard">
+        <h4 class="card-title"><i class="fas fa-map-marked-alt i"></i><%= event.location.name %></h4>
+        <p class="card-text"><i class="far fa-calendar-alt i"></i><%= l(event.schedule, format: '%A %e %B %Y') %></p>
 
-                <h2 class="title"><%= event.location.name %></h2>
-
-            <div class="text">
-
-              <p class="title"><%= event.location.name %></p>
-          <% end %>
-          </div>
-        </div>
+        <a href="#" class="btn btn-primary center-block">Voir l'événement</a>
       </div>
     </div>
-  </div>
-</div>
+  <% end %>
 </div>
