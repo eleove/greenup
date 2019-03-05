@@ -10,7 +10,7 @@ Location.destroy_all
 User.destroy_all
 
 user1 = User.create!(
-  email: 'frdutheil@hyahoo.fr',
+  email: 'frdutheil@yahoo.fr',
   password: 'password',
   username: 'François Dutheil',
   points: 12,
