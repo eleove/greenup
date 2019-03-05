@@ -1,7 +1,29 @@
-<h1>Les évènements</h1>
+<div class="lesevents">
+  <h1>Liste des évènements</h1>
+  <div class="row">
+    <% @events.each do |event| %>
+    <div class="example-2 card">
+      <div class="wrapper">
+        <%= cl_image_tag event.location.photo, height: 300, width: 400, crop: :fill %>
+        <div class="header">
+          <div class="date">
+              <p> <%= l(event.schedule, format: '%A %e %B %Y') %> </p>
+          </div>
+        </div>
+        <div class="data">
+          <div class="content">
+            <span class="author">Jane Doe</span>
 
-<% @events.each do |event| %>
-  <p> <%= event.location.name %> </p>
-  <p> <%= l(event.schedule, format: '%A %e %B %Y') %> </p>
-  <p> <%= event.user.username %> </p>
-<% end %>
+                <h2 class="title"><%= event.location.name %></h2>
+
+            <div class="text">
+
+              <p class="title"><%= event.location.name %></p>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
