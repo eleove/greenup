@@ -1,8 +1,18 @@
 .lesevents {
+  background-image: url(stardust.png);
+  background-repeat: repeat;
   h1 {
+    background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   a {
     font-size: auto;
+    background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
   }
   .la {
     margin: 20px;
@@ -20,6 +30,7 @@
   .bodycard {
     .btn {
       margin: 0;
+      border: 3px solid #FF512F;
     }
     padding: 0 20px;
     h4 {

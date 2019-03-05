@@ -20,11 +20,12 @@ body {
   height: 55vh;
   h2 {
     position: absolute;
-    padding-top: 30px;
+    padding-top: 60px;
     text-align: center;
     top: 6%;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.9)!important;
+    text-shadow: 2px 3px 19px black;
     left: 10%;
     right: 10%;
   }
@@ -32,7 +33,7 @@ body {
     position: absolute;
     bottom: 10%;
     color: white;
-    background-color: #B22136;
+    background: linear-gradient(50deg, #FF512F, #DD2476);
     font-size: 12px;
     text-align: center;
     padding: 15px 18px;
@@ -45,12 +46,13 @@ body {
 
 .questcequegreenup {
   z-index: 2;
-  background-image: image-url("pi.png");
-  background-size: 35%;
-  background-repeat: no-repeat;
   padding: 20px 60px;
-  background-position: 210px 50px;
-  color: #111C46;
+
+  h3 {
+  background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 }
 
 
@@ -68,11 +70,10 @@ body {
     bottom: 20%;
     right: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 15px;
     margin: 10%;
     border-radius: 5px;
-    color: #B22136;
+    color: white !important;
+    text-shadow: 2px 3px 19px black;
   }
 }
 
