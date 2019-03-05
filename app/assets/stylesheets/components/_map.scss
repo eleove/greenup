@@ -64,9 +64,10 @@
 }
 
 .mapboxgl-popup-content {
+  text-align: center !important;
   padding: 6px 12px !important;
   max-width: 250px;
-  // border: solid 1px #05115A;
+  // border: solid 1px $gublue;
   border-radius: 8px !important;
   /* color: #05115A; */
   opacity: 0.9;
@@ -76,7 +77,7 @@
   }
   p {
     margin: 5px 10px;
-    color: #05115A;
+    color: $gublue;
   }
 
   a {

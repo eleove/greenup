@@ -3,12 +3,10 @@
 
 
  -->
+  <%= link_to location_path(location) do %>
+      <p> <%= cl_image_tag location.photo, height: 100, width: 133, crop: :fill %> </p>
+      <p> <%= location.name %> </p >
+  <% end %>
 
-<%= link_to location_path(location) do %>
-  <div>
-    <p> <%= cl_image_tag location.photo, height: 100, width: 133, crop: :fill %> </p>
-    <p> <%= location.name %> </p >
-  </div>
-<% end %>
 
 
