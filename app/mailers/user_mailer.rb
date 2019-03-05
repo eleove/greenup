@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.welcome.subject
   #
 
-  default from: 'eleonore.breton@hec.edu'
+  # default from: 'hello@greenup.com'
 
   def welcome(user)
     @user = user  # Instance variable => available in view
