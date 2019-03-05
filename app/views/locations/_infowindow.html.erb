@@ -1,4 +1,16 @@
-<%= link_to location_path(location) do %>
-    <p> <%= cl_image_tag location.photo, height: 100, width: 133, crop: :fill %> </p>
-    <p> <%= location.name %> </p >
+<% if !location.photo.blank? %>
+
+  <%= link_to location_path(location) do %>
+    <div class="image-div" style="background-image: url(<%= cl_image_path(location.photo) %>)"> </div>
+    <div class="desc-div"> <%= location.name %> </div>
+  <% end %>
+ <% else %>
+
+  <%= link_to location_path(location) do %>
+    <div class="desc-div no-img" > <%= location.name %> </div>
+  <% end %>
+
 <% end %>
+
+
+<!-- height: 100, width: 133, crop: :fill %> </p>

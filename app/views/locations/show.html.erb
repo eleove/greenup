@@ -1,21 +1,30 @@
 <div class="lieu">
   <h1><%= @location.name %> </h1>
 
-  <%= cl_image_tag @location.photo, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @location.photo, height: 300, width: 400, crop: :fill if !@location.photo.blank? %>
 
   <div class="bodylieu">
     <h2> Description </h2>
+    
     <div id="i-have-a-tooltip" data-description="I'm a tooltip!">
-      <p> <%= @location.description %> </p>
+      <% if !@location.description || @location.description.blank? %>
+        <p> <em> Pas de description </em> </p>
+      <% else %>
+        <p> <%= @location.description %> </p>
+      <% end %>
     </div>
 
     <h2> Type de déchets présents </h2>
     <div id="i-have-a-tooltip" data-description="I'm a tooltip!">
+      <% if @location.garbage.empty? %>
+        <p> <em> Aucun déchet indiqué </em> </p>
+      <% else %>
       <ul>
         <% @location.garbage.each do |g| %>
           <li> <%= g %> </li>
         <% end %>
       </ul>
+    <% end %>
     </div>
 
     <h2> Evènement </h2>

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'eleonore.breton@hec.edu'
+  default from: 'hello@greenup.com'
   layout 'mailer'
 end
