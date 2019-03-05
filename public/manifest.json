@@ -1,0 +1,16 @@
+{
+  "short_name": "Green Up",
+  "name": "Green Up",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F4F4F4",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#182761"
+}
