@@ -1,7 +1,15 @@
 .nouveleve {
+  background-image: url(stardust.png);
+  background-repeat: repeat;
   padding: 0 20px;
+  height: 86vh;
   h2 {
     text-align: left;
     padding-left: 15px;
+  }
+  h1 {
+    background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

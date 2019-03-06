@@ -1,3 +1,15 @@
+.formconnect {
+  background-image: url(stardust.png);
+  background-repeat: repeat;
+  height: 86vh;
+  h2 {
+    background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
+  }
+}
+
 h2 {
   padding-top: 20px;
   margin-top: 20px;
@@ -25,6 +37,7 @@ label {
 .btn {
   margin-bottom: 20px;
   font-weight: bold;
+
 
 }
 

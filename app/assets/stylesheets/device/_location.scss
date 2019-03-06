@@ -2,12 +2,17 @@
   color: #182761;
   background-image: url(stardust.png);
   background-repeat: repeat;
+
   h1 {
     margin: 5px 0 !important;
     padding-bottom: 10px;
     max-width: 100% !important;
     font-size: 22px !important;
     padding: 0 20px;
+    background: -webkit-linear-gradient(70deg, #ff8c00, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
 
   }
 
