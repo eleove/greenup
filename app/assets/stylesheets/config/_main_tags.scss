@@ -1,39 +1,36 @@
 body {
   font-family: 'Montserrat', 'Open Sans', sans-serif !important;
+  h1 {
+    font-size: 26px !important;
+    padding-top: 30px !important;
+    margin-top: 0px !important;
+    text-align: center !important;
+    font-family: 'Montserrat', 'Open Sans', sans-serif !important;
+
+  }
+
+  h2 {
+    font-size: 22px !important;
+    margin-top: 0px !important;
+    font-family: 'Montserrat', 'Open Sans', sans-serif !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+    font-family: 'Montserrat', 'Open Sans', sans-serif !important;
+  }
+
+  p, label {
+    font-size: 18px !important;
+    font-family: 'Montserrat', 'Open Sans', sans-serif !important;
+  }
+
+  // text-align center pour toutes les balises ?
+
+  h1, h2, p, label, em {
+    color: #182761 !important;
+    // max-width: 95vw !important;
+  }
 }
 
-h1 {
-  font-size: 26px !important;
-  padding-top: 30px !important;
-  margin-top: 0px !important;
-  text-align: center !important;
-  font-family: 'Montserrat', 'Open Sans', sans-serif !important;
 
-}
-
-h2 {
-  font-size: 22px !important;
-  margin-top: 0px !important;
-  font-family: 'Montserrat', 'Open Sans', sans-serif !important;
-}
-
-h3 {
-  font-size: 20px !important;
-  font-family: 'Montserrat', 'Open Sans', sans-serif !important;
-}
-
-p, label {
-  font-size: 18px !important;
-  font-family: 'Montserrat', 'Open Sans', sans-serif !important;
-}
-
-// text-align center pour toutes les balises ?
-
-h1, h2, p, label, em {
-  color: #182761 !important;
-  // max-width: 95vw !important;
-}
-
-.footer p {
- color: white !important;
-}

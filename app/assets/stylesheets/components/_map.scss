@@ -10,9 +10,7 @@ $infowindow-width: 180px;
 
 #addlocationbutton {
   position: absolute;
-  bottom: 20px;
-  left: 45%;
-  right: 45%;
+  bottom: 18%;
   border-radius: 50%;
   background: linear-gradient(50deg, #FF512F, #DD2476);
   color: white;
@@ -22,6 +20,9 @@ $infowindow-width: 180px;
   text-align: center;
   z-index: 2;
   padding: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #addlocationbutton:hover {
@@ -98,6 +99,7 @@ $infowindow-width: 180px;
   height: 90px;
   width: $infowindow-width;
   border-radius: 3px;
+  position: relative;
 }
 
 .desc-div {

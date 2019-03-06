@@ -9,7 +9,7 @@
         <li><%= link_to 'Signaler un lieu', new_location_path %></li>
         <li><%= link_to 'Voir tous les évènements', events_path %></li>
         <% if user_signed_in? %>
-          <li><%= link_to 'Mon compte', user_path(current_user) %></li>
+          <li><%= link_to 'Mon profil', user_path(current_user) %></li>
           <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %> </li>
         <% else %>
           <li><%= link_to 'Se connecter', new_user_session_path %></li>

@@ -1,8 +1,4 @@
 .lesevents {
-  background-image: image-url("stardust.png");
-  background-repeat: repeat;
-  padding-bottom: 20px;
-  height: 100vh;
   h1 {
     background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
     -webkit-background-clip: text;
@@ -19,7 +15,7 @@
   .la {
     margin: 20px;
     position: relative;
-    box-shadow: 1px 0px 12px gray;
+    box-shadow: 2px 1px 9px rgba(0, 0, 0, 0.5);
     padding-bottom: 10px;
     background-color: rgba(255, 255, 255, 0.5);
     img {

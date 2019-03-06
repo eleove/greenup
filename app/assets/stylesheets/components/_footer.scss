@@ -1,7 +1,5 @@
 .footer {
-  background-color: #111C46;
-  color: white;
-  font-size: 12px;
+  color: #111C46;
   padding: 5px;
   margin-top: 0px;
   height: $footerheight;
@@ -11,5 +9,6 @@
 
   p {
     margin: 0 !important;
+    font-size: 12px !important;
   }
 }
