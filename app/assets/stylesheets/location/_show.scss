@@ -1,6 +1,7 @@
 .lieu {
   background-image: url(stardust.png);
   background-repeat: repeat;
+  padding-bottom: 10px;
   position: relative;
   img {
     opacity: 0.8;
@@ -39,13 +40,22 @@
 #i-have-a-tooltip {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 20px;
-  text-align: center;
-  padding: 11%;
+  padding: 5%;
   margin: 5% auto;
   background: white;
   border-radius: 5px;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
+.btn-lieu {
+  margin-top: 30px;
+  background: linear-gradient(50deg, #FF512F, #DD2476);
+  color: white;
+  padding: 10px 20px;
+}
 
-
+.btn-lieu:hover {
+  margin-top: 30px;
+  background: linear-gradient(50deg, #FF512F, #DD2476);
+  color: white;
+}

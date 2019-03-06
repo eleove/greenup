@@ -1,9 +1,14 @@
-.rejoindre {
+.main-container .rejoindre {
   padding: 0 20px;
-  h6, em {
+  background-image: url(stardust.png);
+  background-repeat: repeat;
+  padding-bottom: 10px;
+  h6, em, h3 {
     text-align: left !important;
   }
-  span {
-
+  h1 {
+    background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
