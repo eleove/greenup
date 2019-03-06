@@ -1,5 +1,5 @@
 .lieu {
-  background-image: url(stardust.png);
+  background-image: image-url("stardust.png");
   background-repeat: repeat;
   padding-bottom: 10px;
   position: relative;
@@ -12,7 +12,7 @@
     position: absolute;
     top: 10px;
     padding: 0 10px;
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     font-weight: bold;
     z-index: 3;
     text-shadow: 1px 1px 2px black;
