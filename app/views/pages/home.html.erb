@@ -17,11 +17,9 @@
   <% texts = ["Un mouchoir en papier met 3 mois à se dégrader", "Un trognon de pomme met 5 mois à se dégrader", "Une carte téléphonique met 1000 ans à se dégrader", "Un filet de pêche met 600 ans à se dégrader", "Une brique de lait met 5 mois à se dégrader", "De l'huile de vidange met 15 ans à se dégrader", "Un papier de bonbon met 5 ans à se dégrader", "Un journal met 12 mois à se dégrader", "Un ticket de bus met un an à se dégrader"] %>
 
   <div class="video">
-
-    <h3> <%= texts.sample %> </h3>
-    <video autoplay="autoplay" loop muted>
-      <source src="<%= asset_path("video.mp4") %>" type="video/mp4">
-    </video>
+    <div class="desc">
+      <h3> Le saviez-vous ? <br><br> <%= texts.sample %> </h3>
+    </div>
   </div>
 
 

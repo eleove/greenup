@@ -1,7 +1,5 @@
 .main-container .rejoindre {
   padding: 0 20px;
-  background-image: url(stardust.png);
-  background-repeat: repeat;
   padding-bottom: 10px;
   height: 85vh;
 
@@ -18,7 +16,7 @@
     font-size: 20px !important;
     margin-top: 30px;
     border-left: solid 3px #FF512F;
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: rgba(0, 0, 0, 0.05);
     padding: 10px;
     margin-bottom: 30px;
     color: #FF512F;
@@ -30,7 +28,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   padding: 33px;
   border-radius: 5%;
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
   em {

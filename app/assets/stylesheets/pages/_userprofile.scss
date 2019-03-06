@@ -25,15 +25,12 @@
 }
 
 .infos-user .card {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 
 }
 
 .userprofilhtml {
-  background-image: url(stardust.png);
-  background-repeat: repeat;
-  padding-bottom: 20px;
   h3 {
     background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
     -webkit-background-clip: text;
@@ -50,6 +47,7 @@
 
 .carte {
   padding: 20px !important;
+  min-height: 180px;
   span {
     font-size: 50px;
     font-weight: bold;
@@ -64,7 +62,7 @@
   color: rgba(178, 33, 54, 0.8);
   background-color: rgba(255, 255, 255, 0.9);
   padding: 30px 0;
-  border-right: 3px solid rgba(0, 0, 0, 0.05);
+  border-right: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 .ma-bio {
@@ -100,7 +98,6 @@
 .pseudo {
   font-size: 20px;
   margin-bottom: 15px;
-  font-weight: lighter;
   color: #182761;
 }
 
@@ -109,7 +106,7 @@
   margin: 10px auto;
   min-height: 28vh;
   padding: 20px;
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   p {
     text-align: center;
