@@ -22,7 +22,7 @@ const initMapbox = () => {
       map.fitBounds(bbox, {
         padding: {top: 10, bottom:15, left: 5, right: 5}
       });
-    }, 100);
+    }, 200);
     // map.addControl(geocoder);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
