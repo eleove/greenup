@@ -16,6 +16,7 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11'
     });
+    window.map = map
 
     setTimeout(() => {
       map.fitBounds(bbox, {
@@ -41,6 +42,7 @@ const initMapbox = () => {
     // map.addControl(new mapboxgl.NavigationControl());
     document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
   };
+
 };
 
 export { initMapbox };
