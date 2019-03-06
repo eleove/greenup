@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> Green Up </title>
+    <!-- Pour progressive web app -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-startup-image" href="/logo.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <!-- Meta Open Graph -->
     <meta property="og:title" content="Green Up, pour une nature sans déchets" />
     <meta property="og:description" content="Se réunir pour identifier et aller nettoyer les décharges sauvages" />
     <meta property="og:url" content="https://green-up.herokuapp.com/" />
@@ -17,7 +25,6 @@
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.css' type='text/css' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600,700" rel="stylesheet">
-    <link rel="manifest" href="/manifest.json">
     <%= favicon_link_tag asset_path('curseurmap.png') %>
   </head>
   <body>
