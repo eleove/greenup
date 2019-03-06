@@ -2,13 +2,15 @@
 
   <h1> Rejoindre l'évènement </h1>
 
-  <h2> <%= @event.location.name %>
-  <h4 style="padding-top: 0px !important;"> <%= l(@event.schedule, format: '%A %e %B %Y') %> </h4>
-  <% if @event.user == current_user  %>
-    <h6 style="text-align: center"> <em> Evènement créé par vous </em> </h6>
-  <% else %>
-    <h6 style="text-align: center"> <em> Evènement créé par <%= @event.user.username %> </em> </h6>
-  <% end %>
+  <div class="bodyrejoindre">
+    <h2> <%= @event.location.name %>
+    <h4> <%= l(@event.schedule, format: '%A %e %B %Y') %> </h4>
+    <% if @event.user == current_user  %>
+      <h6 style="text-align: center"> <em> Evènement créé par vous </em> </h6>
+    <% else %>
+      <h6 style="text-align: center"> <em> Evènement créé par <%= @event.user.username %> </em> </h6>
+    <% end %>
+  </div>
 
 
   <br>

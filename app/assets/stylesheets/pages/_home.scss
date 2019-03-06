@@ -15,12 +15,13 @@ body {
 .banner {
   position: relative;
   margin-bottom:0;
-  background-image: image-url("greenup.png");
+  background-image: linear-gradient(50deg, #FF512F50, #DD247610), url(greenup.png);
+  //background-image: image-url("greenup.png");
   background-size: cover;
   height: 55vh;
   h2 {
     position: absolute;
-    padding-top: 60px;
+    padding-top: 70px;
     text-align: center;
     top: 6%;
     font-weight: bold;
@@ -40,8 +41,8 @@ body {
     padding: 15px 18px;
     margin-bottom: 50px;
     border-radius: 30px;
-    right: 20%;
-    left: 20%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -87,3 +88,8 @@ body {
   font-size: 15px !important;
 }
 
+@media (min-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -10,14 +10,21 @@
   }
   h1 {
     position: absolute;
-    top: 27%;
-    color: white !important;
+    top: 10px;
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.8) !important;
     font-weight: bold;
     z-index: 3;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 1px 1px 2px black;
     right: 0;
     left: 0;
   }
+}
+
+.backimg {
+  background-size: cover;
+  height: 270px;
+
 }
 
 .bodylieu {
@@ -52,6 +59,7 @@
   background: linear-gradient(50deg, #FF512F, #DD2476);
   color: white;
   padding: 10px 20px;
+  font-size: 17px;
 }
 
 .btn-lieu:hover {

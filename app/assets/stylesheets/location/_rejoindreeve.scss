@@ -3,12 +3,42 @@
   background-image: url(stardust.png);
   background-repeat: repeat;
   padding-bottom: 10px;
-  h6, em, h3 {
-    text-align: left !important;
+  height: 85vh;
+
+  p {
+    margin-bottom: 30px;
   }
   h1 {
     background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+  }
+  h4 {
+    font-size: 20px !important;
+    margin-top: 30px;
+    border-left: solid 3px #FF512F;
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 10px;
+    margin-bottom: 30px;
+    color: #FF512F;
+    font-weight: normal;
   }
 }
+
+.bodyrejoindre {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 33px;
+  border-radius: 5%;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  em {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+  }
+}
+
+
