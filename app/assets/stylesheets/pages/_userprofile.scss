@@ -11,7 +11,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 1.5px solid rgba(178, 33, 54, 0.8);
+
 }
 
 .infos-user {
@@ -34,6 +34,11 @@
   background-image: url(stardust.png);
   background-repeat: repeat;
   padding-bottom: 20px;
+  h3 {
+    background: -webkit-linear-gradient(50deg, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 
@@ -46,10 +51,10 @@
 .carte {
   padding: 20px !important;
   span {
-        font-size: 50px;
+    font-size: 50px;
     font-weight: bold;
     background: -webkit-linear-gradient(70deg, #ff8c00, #ff0080);
-        background-clip: border-box;
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -111,8 +116,4 @@
   }
 }
 
-h3 {  background: -webkit-linear-gradient(70deg, #ff8c00, #ff0080);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-}
 

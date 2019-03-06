@@ -72,6 +72,7 @@ $infowindow-width: 180px;
 .mapboxgl-popup-close-button {
   font-size: 40px;
   color: $gupink !important;
+
 }
 
 .mapboxgl-popup-content {
@@ -96,6 +97,7 @@ $infowindow-width: 180px;
   background-size: cover;
   height: 90px;
   width: $infowindow-width;
+  border-radius: 3px;
 }
 
 .desc-div {

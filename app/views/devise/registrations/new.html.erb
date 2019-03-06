@@ -1,47 +1,47 @@
-<h2>Inscription</h2>
+<div class="formconnect">
+  <h2>Inscription</h2>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-      <div class="formulaire">
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= f.error_notification %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+        <div class="formulaire">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
 
-          <div class="form-inputs">
-            <%= f.input :username,
-                        label: 'Ton nom complet ou ton pseudo',
-                        required: true %>
-            <%= f.input :email,
-                        label: 'Ton email',
-                        required: true,
-                        autofocus: true,
-                        input_html: { autocomplete: "Ton email" }%>
-            <%= f.input :password,
-                        label: 'Ton mot de passe',
-                        required: true,
-                        hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :password_confirmation,
-                        label: 'Confirme ton mot de passe',
-                        required: true,
-                        input_html: { autocomplete: "new-password" } %>
+            <div class="form-inputs">
+              <%= f.input :username,
+                          label: 'Ton nom complet ou ton pseudo',
+                          required: true %>
+              <%= f.input :email,
+                          label: 'Ton email',
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "Ton email" }%>
+              <%= f.input :password,
+                          label: 'Ton mot de passe',
+                          required: true,
+                          hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          label: 'Confirme ton mot de passe',
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "S'inscrire", :class => 'btn-lieu col-xs-10 seconnecter' %>
+            </div>
+          <% end %>
+          <div class="dejauncompte">
+            <p>Déjà un compte ?
+              <% if controller_name != 'sessions' %>
+                <%= link_to "Se connecter", new_session_path(resource_name) %>
+                <br/>
+              <% end %>
+            </p>
           </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, "S'inscrire", :class => 'btn-success col-xs-10 seconnecter' %>
-          </div>
-        <% end %>
-        <div class="dejauncompte">
-          <p>Déjà un compte ?
-            <% if controller_name != 'sessions' %>
-              <%= link_to "Se connecter", new_session_path(resource_name) %>
-              <br/>
-            <% end %>
-          </p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<%= render "devise/shared/links" %>

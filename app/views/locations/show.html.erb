@@ -1,7 +1,11 @@
 <div class="lieu">
   <h1><%= @location.name %> </h1>
 
-  <%= cl_image_tag @location.photo, height: 300, width: 400, crop: :fill if !@location.photo.blank? %>
+
+    <div class="backimg" style="background-image: linear-gradient(50deg, #FF512F50, #DD247610), url(<%= cl_image_path(@location.photo)%>);">
+    </div>
+
+
 
   <div class="bodylieu">
     <h2> Description </h2>

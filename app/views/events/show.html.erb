@@ -2,13 +2,15 @@
 
   <h1> Rejoindre l'évènement </h1>
 
-  <h2> <%= @event.location.name %>
-  <h4 style="padding-top: 0px !important;"> <%= l(@event.schedule, format: '%A %e %B %Y') %> </h4>
-  <% if @event.user == current_user  %>
-    <h6 style="text-align: center"> <em> Evènement créé par vous </em> </h6>
-  <% else %>
-    <h6 style="text-align: center"> <em> Evènement créé par <%= @event.user.username %> </em> </h6>
-  <% end %>
+  <div class="bodyrejoindre">
+    <h2> <%= @event.location.name %>
+    <h4> <%= l(@event.schedule, format: '%A %e %B %Y') %> </h4>
+    <% if @event.user == current_user  %>
+      <h6 style="text-align: center"> <em> Evènement créé par vous </em> </h6>
+    <% else %>
+      <h6 style="text-align: center"> <em> Evènement créé par <%= @event.user.username %> </em> </h6>
+    <% end %>
+  </div>
 
 
   <br>
@@ -21,7 +23,7 @@
     <p> <%= @event.event_participants.length %> participants à cet évènement </p>
   <% end %>
 
-  <% if current_user.id != @event.user_id %>
+
     <% if @event.users.include?(current_user)  %>
       <p>
         <i class="fa fa-check" aria-hidden="true"></i> Vous participez à cet évènement
@@ -32,7 +34,7 @@
         <%= link_to 'Participez à cet évènement', event_event_participants_path(@event), class: "btn btn-success", method: :post  %>
       </p>
     <% end %>
-  <% end %>
+
 
   <div class="socials" style="display: flex">
     <div id="fb-root"></div>

@@ -16,12 +16,13 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11'
     });
+    window.map = map
 
     setTimeout(() => {
       map.fitBounds(bbox, {
         padding: {top: 10, bottom:15, left: 5, right: 5}
       });
-    }, 100);
+    }, 200);
     // map.addControl(geocoder);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
@@ -41,6 +42,7 @@ const initMapbox = () => {
     // map.addControl(new mapboxgl.NavigationControl());
     document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
   };
+
 };
 
 export { initMapbox };
