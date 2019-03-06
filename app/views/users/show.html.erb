@@ -11,7 +11,7 @@
           <%= @user.username %>
         </div>
         <div class="truc">
-          Points : <%= @user.points %>
+          Points : <%= (@user.events.count) + @user.event_participants.count %>
         </div>
       </div>
     </div>

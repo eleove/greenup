@@ -12,11 +12,10 @@ User.destroy_all
 user1 = User.create!(
   email: 'frdutheil@yahoo.fr',
   password: 'password',
-  username: 'François Dutheil',
+  username: 'François Touteklean',
   points: 12,
   avatar: "myAvatar5.png",
-  bio: "I like to participate to massive waste collects with all my mates.
-  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
+  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
   )
 
 user2 = User.create!(
@@ -25,8 +24,7 @@ user2 = User.create!(
   username: 'Eléonore Breton',
   points: 252,
   avatar: "myAvatar3.png",
-  bio: "I like to participate to massive waste collects with all my mates.
-  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
+  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
   )
 
 
@@ -36,8 +34,7 @@ user3 = User.create!(
   username: 'Richard Crado',
   points: 3,
   avatar: "myAvatar2.png",
-  bio: "I like to participate to massive waste collects with all my mates.
-  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
+  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
   )
 
 user4 = User.create!(
@@ -46,8 +43,7 @@ user4 = User.create!(
   username: 'Ginette Paspropre',
   points: 2,
   avatar: "myAvatar.png",
-  bio: "I like to participate to massive waste collects with all my mates.
-  All the protection of environment is a fair question. I would like a better world, clean and happy. Join GreenUp team !"
+  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
   )
 
 
@@ -57,8 +53,7 @@ user5 = User.create!(
   username: 'Caroline Girard',
   points: 253,
   avatar: "myAvatar4.png",
-  bio: "I like to particpate to massive waste collects with all my mates.
-  All the protection of environment is a fair question. I would like a better worl, clean and happy. Join GreenUp team !"
+  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
   )
 
 location1 = Location.create!(
