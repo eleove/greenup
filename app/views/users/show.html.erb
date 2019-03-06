@@ -2,7 +2,9 @@
 <div class="container">
 
   <div class="row avatarbanner">
-    <div class="col-sm-6"> <%= image_tag @user.avatar, class:"profile-pict" %>
+    <% if @user.avatar %>
+      <div class="col-sm-6"> <%= image_tag @user.avatar, class:"profile-pict" %>
+    <% end %>
     </div>
     <div class="card mes-points col-sm-6">
       <div class="pseudo">

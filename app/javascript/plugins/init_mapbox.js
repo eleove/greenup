@@ -16,9 +16,12 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11'
     });
-    map.fitBounds(bbox, {
-      padding: {top: 10, bottom:15, left: 5, right: 5}
-    });
+
+    setTimeout(() => {
+      map.fitBounds(bbox, {
+        padding: {top: 10, bottom:15, left: 5, right: 5}
+      });
+    }, 100);
     // map.addControl(geocoder);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);

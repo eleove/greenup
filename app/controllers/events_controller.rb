@@ -13,8 +13,9 @@ class EventsController < ApplicationController
     @location = Location.find(params[:location_id])
     @event.location = @location
     @event.user = current_user
+
     if @event.save
-      # CHANGER LA REDIRECTION
+      @event_participant = EventParticipant.create(user: current_user, event: @event)
       redirect_to event_path(@event), notice: 'Success'
     else
       render :new
