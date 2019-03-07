@@ -1,9 +1,17 @@
 <%= simple_form_for @location do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible (ville à proximité, point d'intérêt, etc." %>
-  <%= f.input :description, placeholder: "Décrivez l'emplacement"%>
+  <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible" %>
+  <%= f.input :description, placeholder: "Prendre des gants..."%>
+  <h3>Séléctionner les déchêts présents</h3>
   <div class="checkboxinput">
-    <%= f.input :garbage, label: 'Type de déchets présents', as: :check_boxes, collection: Location::GARBAGE %>
+    <div class="container">
+      <ul class="ks-cboxtags">
+        <% Location::GARBAGE.each do |garbage| %>
+          <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne"><%= garbage %></label></li>
+        <% end %>
+      </ul>
+    </div>
+
     <div class="buttonphoto">
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>

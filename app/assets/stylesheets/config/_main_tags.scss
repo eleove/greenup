@@ -27,8 +27,9 @@ body {
 
   // text-align center pour toutes les balises ?
 
-  h1, h2, p, label, em {
+  h2, p, label, em {
     color: #182761 !important;
+    font-weight: normal !important;
     // max-width: 95vw !important;
   }
 }
