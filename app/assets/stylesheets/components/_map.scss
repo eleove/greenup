@@ -73,6 +73,7 @@ $infowindow-width: 180px;
 .mapboxgl-popup-close-button {
   font-size: 40px;
   color: #EC3657 !important;
+  z-index: 100;
 
 }
 

@@ -1,9 +1,23 @@
 <%= simple_form_for @location do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible (ville à proximité, point d'intérêt, etc." %>
-  <%= f.input :description, placeholder: "Décrivez l'emplacement"%>
+  <%= f.input :name, label: "Nom de l'emplacement", placeholder: "Soyez le plus précis possible" %>
+  <%= f.input :description, placeholder: "Prendre des gants..."%>
+  <h3>Séléctionner les déchêts présents</h3>
   <div class="checkboxinput">
-    <%= f.input :garbage, label: 'Type de déchets présents', as: :check_boxes, collection: [['Verre', 'Verre'], ['Electroménager', 'Electroménager'], ['Vêtements', 'Vêtements'], ['Déchets industriels', 'Déchets industriels'], ['Métal', 'Métal']] %>
+    <div class="container">
+      <ul class="ks-cboxtags">
+        <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Verre</label></li>
+        <li><input type="checkbox" id="checkboxThree" value="Rarity"><label for="checkboxThree">Emballage et plastique</label></li>
+        <li><input type="checkbox" id="checkboxFour" value="Moondancer"><label for="checkboxFour">Textile</label></li>
+        <li><input type="checkbox" id="checkboxSeven" value="Fluttershy"><label for="checkboxSeven">Ordures ménagères</label></li>
+        <li><input type="checkbox" id="checkboxSix" value="Twilight Sparkle"><label for="checkboxSix">Métal</label></li>
+        <li><input type="checkbox" id="checkboxNine" value="Princess Celestia"><label for="checkboxNine">Déchêts industriels</label></li>
+        <li><input type="checkbox" id="checkboxTen" value="Gusty"><label for="checkboxTen">Vêtements</label></li>
+        <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Discord"><label for="checkboxEleven">Éléctroménager</label></li>
+      </ul>
+    </div>
+
+
     <div class="buttonphoto">
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
