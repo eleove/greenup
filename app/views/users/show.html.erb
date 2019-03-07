@@ -8,13 +8,15 @@
     <% end %>
       <div class="card mes-points col-sm-6">
         <div class="pseudo">
-          <%= @user.username %>
+          <strong> <%= @user.username %> </strong>
         </div>
         <div class="truc">
-          Points : <%= (@user.events.count) + @user.event_participants.count %>
+          Points : <%= @user_points %>
         </div>
-        <p> <em> <i class="fa fa-star" aria-hidden="true"></i>
- Ton classement : <%= @rank %> sur <%= @users.count %> </em></p>
+        <!-- <p> Scores des users <%= @ordered_users_scores %> </p>
+        <p> Point de l'user <%= @user_points %> </p> -->
+        <p style="font-size: 16px !important; margin-top: 10px !important"> <i class="fa fa-star" aria-hidden="true"></i>
+ Classement : <%= @rank %> / <%= @users.count %> </p>
       </div>
     </div>
 
@@ -31,7 +33,11 @@
       <div class="card mes-evenements">
         <div class="carte">
           <span><%= @user.events.count %></span>
-        <p>événements créés</p>
+          <% if @user.events.count < 2  %>
+            <p>événement créé</p>
+          <% else %>
+            <p>événements créés</p>
+          <% end %>
 
         </div>
       </div>
@@ -40,7 +46,11 @@
       <div class="card mes-participations">
         <div class="carte">
           <span><%= @user.event_participants.count  %></span>
-          <p>participations</p>
+          <% if @user.event_participants.count < 2 %>
+            <p>participation</p>
+          <% else %>
+            <p>participations</p>
+          <% end %>
 
         </div>
       </div>

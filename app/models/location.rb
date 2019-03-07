@@ -1,5 +1,5 @@
 class Location < ApplicationRecord
-  GARBAGE = ['Verre', 'Emballage et plastique', 'Textile', 'Ordures ménagères', 'Métal', 'Déchets industriels', 'Éléctroménager']
+  GARBAGE = ['Verre', 'Emballage et plastique', 'Textile', 'Ordures ménagères', 'Métal', 'Déchets industriels', 'Électroménager']
 
   belongs_to :user
   has_one :event, dependent: :destroy
