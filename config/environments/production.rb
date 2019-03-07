@@ -6,7 +6,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :user_name => 'eleove',
-    :password => ENV['password'],
+    :password => ENV['SENGRID_PASSWORD'],
     :domain => 'hellogreenup.com',
     :address => 'smtp.sendgrid.net',
     :port => 587,

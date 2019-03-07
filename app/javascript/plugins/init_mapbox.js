@@ -16,7 +16,8 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11'
     });
-    window.map = map
+    window.map = map;
+    window.bbox = bbox;
 
     setTimeout(() => {
       map.fitBounds(bbox, {
