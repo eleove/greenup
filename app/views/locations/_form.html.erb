@@ -6,8 +6,8 @@
   <div class="checkboxinput">
     <div class="container">
       <ul class="ks-cboxtags">
-        <% Location::GARBAGE.each do |garbage| %>
-          <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne"><%= garbage %></label></li>
+        <% Location::GARBAGE.each_with_index do |garbage, i| %>
+          <li><input type="checkbox" id="checkbox<%= i %>" value="Rainbow Dash"><label for="checkbox<%= i %>"><%= garbage %></label></li>
         <% end %>
       </ul>
     </div>
