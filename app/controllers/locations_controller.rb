@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
           {
             long: location.longitude,
             lat: location.latitude,
-            image_url: helpers.asset_url('curseurmap.png'),
+            image_url: helpers.asset_url('newcurseurmap.png'),
             infoWindow: render_to_string(partial: "infowindow", locals: { location: location })
           }
     end
