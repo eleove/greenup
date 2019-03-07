@@ -32,10 +32,10 @@
     </div>
 
     <% if @location.event %>
-      <%= link_to 'Rejoins l\'évènement !', event_path(@location.event), class: "btn center-block btn-lieu" %>
+      <%= link_to 'Rejoins la collecte !', event_path(@location.event), class: "btn center-block btn-lieu" %>
     <% else %>
       <p> Pas d'évènement pour l'instant </p>
-      <%= link_to 'Créer un évènement', new_location_event_path(@location), class: "btn center-block btn-lieu" %>
+      <%= link_to 'Organiser une collecte', new_location_event_path(@location), class: "btn center-block btn-lieu" %>
     <% end %>
   </div>
 
