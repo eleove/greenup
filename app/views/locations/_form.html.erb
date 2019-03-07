@@ -7,7 +7,10 @@
     <div class="container">
       <ul class="ks-cboxtags">
         <% Location::GARBAGE.each_with_index do |garbage, i| %>
-          <li><input type="checkbox" id="checkbox<%= i %>" value="Rainbow Dash"><label for="checkbox<%= i %>"><%= garbage %></label></li>
+          <li>
+            <input type="checkbox" id="checkbox<%= i %>" value="<%= garbage %>" name="location[garbage][]">
+            <label for="checkbox<%= i %>"><%= garbage %></label>
+          </li>
         <% end %>
       </ul>
     </div>
