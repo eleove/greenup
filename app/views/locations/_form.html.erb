@@ -6,14 +6,9 @@
   <div class="checkboxinput">
     <div class="container">
       <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Verre</label></li>
-        <li><input type="checkbox" id="checkboxThree" value="Rarity"><label for="checkboxThree">Emballage et plastique</label></li>
-        <li><input type="checkbox" id="checkboxFour" value="Moondancer"><label for="checkboxFour">Textile</label></li>
-        <li><input type="checkbox" id="checkboxSeven" value="Fluttershy"><label for="checkboxSeven">Ordures ménagères</label></li>
-        <li><input type="checkbox" id="checkboxSix" value="Twilight Sparkle"><label for="checkboxSix">Métal</label></li>
-        <li><input type="checkbox" id="checkboxNine" value="Princess Celestia"><label for="checkboxNine">Déchêts industriels</label></li>
-        <li><input type="checkbox" id="checkboxTen" value="Gusty"><label for="checkboxTen">Vêtements</label></li>
-        <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Discord"><label for="checkboxEleven">Éléctroménager</label></li>
+        <% ["toto", "tata"].each do |garbage| %>
+          <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne"><%= garbage %></label></li>
+        <% end %>
       </ul>
     </div>
 
