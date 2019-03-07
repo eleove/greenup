@@ -37,5 +37,11 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= render 'shared/footer' %>
+    <script>
+      var iOS = !!navigator.platform && /iPhone/.test(navigator.platform);
+         if(iOS) {
+            document.querySelector('link[rel="manifest"]').setAttribute("rel", "no-on-ios");
+         }
+    </script>
   </body>
 </html>
