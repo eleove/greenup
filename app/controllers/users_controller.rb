@@ -3,15 +3,19 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @users = User.all
     users_scores = @users.map do |user|
-      if user.points
-        user.points
-      else
-        0
-      end
+      user.events.count + user.event_participants.count
     end
-    @ordered_users_scores = users_scores.sort.reverse
+    # début de la solution correcte
+    # users_scores = @users.map do |user|
+    #   if user.points
+    #     user.points
+    #   else
+    #     0
+    #   end
+    # end
+    ordered_users_scores = users_scores.sort.reverse
     @user_points = @user.events.count + @user.event_participants.count
-    @rank = @ordered_users_scores.index(@user_points)
+    @rank = ordered_users_scores.index(@user_points) + 1
   end
 
   # def update

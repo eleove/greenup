@@ -13,7 +13,6 @@ user1 = User.create!(
   email: 'frdutheil@yahoo.fr',
   password: 'password',
   username: 'François Touteklean',
-  points: 12,
   avatar: "myAvatar5.png",
   bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
   )
@@ -22,9 +21,8 @@ user2 = User.create!(
   email: 'eleonore.breton@hec.edu',
   password: 'password',
   username: 'Eléonore Breton',
-  points: 252,
   avatar: "myAvatar3.png",
-  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
+  bio: "Make Earth great again"
   )
 
 
@@ -32,16 +30,14 @@ user3 = User.create!(
   email: 'bigcrado@gmail.com',
   password: 'password',
   username: 'Richard Crado',
-  points: 3,
   avatar: "myAvatar2.png",
-  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
+  bio: "J'ai beaucoup aimé l'idée de Green Up et j'espère trouver des camarades pour aller ramasser !"
   )
 
 user4 = User.create!(
   email: 'Ginette.paspropre@gmail.com',
   password: 'password',
   username: 'Ginette Paspropre',
-  points: 2,
   avatar: "myAvatar.png",
   bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
   )
@@ -51,9 +47,8 @@ user5 = User.create!(
   email: 'carolinemarie.girard@gmail.com',
   password: 'password',
   username: 'Caroline Girard',
-  points: 253,
   avatar: "myAvatar4.png",
-  bio: "Concerné par les problèmes d'environnement, j'ai décidé de rejoindre GreenUp il y a deux mois. J'habite près du lac d'Annecy, et j'essaye de participer aux collectes dans les environs dès que j'en ai l'occasion !"
+  bio: "J'habite à Valence et je ramasse des déchets depuis plusieurs années, à très vite sur le terrain !"
   )
 
 location1 = Location.create!(
@@ -62,7 +57,7 @@ location1 = Location.create!(
   longitude: 6.129384,
   user: user4,
   garbage: ["Verre", "Emballage et plastique", "Textile"],
-  description: 'Ancienne decharge. Fermée en 2003. Il y a eu en plus des bulldo qui sont passés enterrer. Donc ça réapparaît sans arrêt. Gants obligatoires of course.'
+  description: 'Ancienne décharge, fermée en 2003. Il y a eu en plus des bulldozers qui sont passés enterrer les déchets. Donc ça réapparaît sans arrêt. Gants obligatoires of course.'
   )
 
 location1.remote_photo_url = 'https://ak8.picdn.net/shutterstock/videos/13446458/thumb/1.jpg?i10c=img.resize(height:160)'
@@ -73,24 +68,24 @@ location2 = Location.create!(
   latitude: 48.475479,
   longitude: 2.693954,
   user: user4,
-  garbage: ["Verre", "Ordures ménagères", "Éléctroménager"],
-  description: 'Début de décharge. Le village en dessous est prêt à filer un coup de main via en prêtant 2 camions. La sous préfette est prévue en fin de soirée. Gants obligatoire of course.'
+  garbage: ["Verre", "Ordures ménagères", "Électroménager"],
+  description: 'Début de décharge. Le village en dessous est prêt à filer un coup de main en prêtant 2 camions. La sous-préfette est prévue en fin de soirée.'
   )
 
 location2.remote_photo_url = 'https://ak5.picdn.net/shutterstock/videos/5101895/thumb/1.jpg?i10c=img.resize(height:160)'
 location2.save
 
-location3 = Location.create!(
-  name: 'Massignieu-de-Rives (grange de Scioux)',
-  latitude: 45.899246,
-  longitude: 5.7809804,
-  user: user3,
-  garbage: ["Vêtements", "Métal", "verre"],
-  description: 'Pas de précautions particulières. Les riverains ont commencé le nettoyage il y a 2 mois. Les encombrants sont dégagés. Gants obligatoires of course.'
-  )
+# location3 = Location.create!(
+#   name: 'Massignieu-de-Rives (grange de Scioux)',
+#   latitude: 45.899246,
+#   longitude: 5.7809804,
+#   user: user3,
+#   garbage: ["Vêtements", "Métal", "verre"],
+#   description: 'Pas de précautions particulières. Les riverains ont commencé le nettoyage il y a 2 mois. Les encombrants sont dégagés.'
+#   )
 
-location3.remote_photo_url = 'https://ak2.picdn.net/shutterstock/videos/9792092/thumb/1.jpg?i10c=img.resize(height:160)'
-location3.save
+# location3.remote_photo_url = 'https://ak2.picdn.net/shutterstock/videos/9792092/thumb/1.jpg?i10c=img.resize(height:160)'
+# location3.save
 
 location4 = Location.create!(
   name: 'Corniche de la Mer Benodet (allée Saint Gildas)',
@@ -117,14 +112,12 @@ location5 = Location.create!(
 location5.remote_photo_url = 'https://ak2.picdn.net/shutterstock/videos/9792092/thumb/1.jpg?i10c=img.resize(height:160)'
 location5.save
 
-
-
 location6 = Location.create!(
   name: 'Croignon près nationale 12',
   latitude: 44.817854,
   longitude: -0.338279,
   user: user1,
-  garbage: ["Verre", "Emballage et plastique", "Textile", "Éléctroménager"],
+  garbage: ["Verre", "Emballage et plastique", "Textile", "Électroménager"],
   description: 'Le long de la nationale. Le ruisseau démarre par un gros caddie. Le tas de déchets est au petit pont derrière. Gants obligatoires of course.'
   )
 
@@ -163,29 +156,41 @@ location9 = Location.create!(
   longitude: -1.496602,
   user: user1,
   garbage: ["Emballage et plastique", "Textile"],
-  description: 'Beaucoup de bouteilles plastiques. Prévoir des gants. Je serai là pour marquer le chantier. Gants obligatoires of course.'
+  description: 'Beaucoup de bouteilles plastiques. Prévoir des gants. Je serai là pour marquer le chantier.'
   )
 
 location9.remote_photo_url = 'https://images.unsplash.com/photo-1531326537431-6197cac3795b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80'
 location9.save
 
 
+# location10 = Location.create!(
+#   name: 'Lamby champ fleuri',
+#   latitude: 45.798806,
+#   longitude: 5.287773,
+#   user: user1,
+#   garbage: ["Verre", "Textile", "Métal", "Déchets industriels"],
+#   description: 'Il y a des anciens fûts essence. Prévoir du matos et une estafette. Gants obligatoires of course.'
+#   )
 
+# location10.remote_photo_url = 'https://images.unsplash.com/4/trash-can.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=747&q=80'
+# location10.save
 
-location10 = Location.create!(
-  name: 'Lamby champ fleuri',
-  latitude: 45.798806,
-  longitude: 5.287773,
-  user: user1,
-  garbage: ["Verre", "Textile", "Métal", "Déchets industriels"],
-  description: 'Il y a des anciens fûts essence. prévoir matos et une estafette. Gants obligatoires of course.'
+event1 = Event.create!(
+  location: location1,
+  user: user2,
+  schedule: DateTime.new(2019,03,10,10,30)
   )
 
-location10.remote_photo_url = 'https://images.unsplash.com/4/trash-can.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=747&q=80'
-location10.save
+# je sais pas pourquoi ça créé par celui-là de base
+EventParticipant.create!(
+  user: user2,
+  event: event1
+  )
 
-
-
+EventParticipant.create!(
+  user: user5,
+  event: event1
+  )
 
 
 
