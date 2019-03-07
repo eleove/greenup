@@ -43,13 +43,16 @@
 //
 
 #i-have-a-tooltip {
-  font-family: Helvetica,Arial,sans-serif;
   font-size: 20px;
   padding: 5%;
   margin: 5% auto;
   background: white;
   border-radius: 5px;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+  li {
+    list-style-type: none;
+    color: gray;
+  }
 }
 
 .btn-lieu {
