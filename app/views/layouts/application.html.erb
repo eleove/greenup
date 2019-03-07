@@ -10,7 +10,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-startup-image" href="/logo.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="/logo.jpg">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="pwa-setup" href="manifest.json" >
+    <script async src="https://github.com/GoogleChromeLabs/pwacompat/blob/master/pwacompat.js"></script>
     <!-- Meta Open Graph -->
     <meta property="og:title" content="Green Up, pour une nature sans déchets" />
     <meta property="og:description" content="Se réunir pour localiser et aller nettoyer les décharges sauvages" />
@@ -37,11 +38,5 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= render 'shared/footer' %>
-    <script>
-      var iOS = !!navigator.platform && /iPhone/.test(navigator.platform);
-         if(iOS) {
-            document.querySelector('link[rel="manifest"]').setAttribute("rel", "no-on-ios");
-         }
-    </script>
   </body>
 </html>
