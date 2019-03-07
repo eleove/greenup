@@ -13,6 +13,8 @@
         <div class="truc">
           Points : <%= (@user.events.count) + @user.event_participants.count %>
         </div>
+        <p> <em> <i class="fa fa-star" aria-hidden="true"></i>
+ Ton classement : <%= @rank %> sur <%= @users.count %> </em></p>
       </div>
     </div>
 
