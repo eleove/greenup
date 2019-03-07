@@ -1,14 +1,14 @@
 <div class="rejoindre">
 
-  <h1> Rejoindre l'évènement </h1>
+  <h1> Rejoindre la collecte </h1>
 
   <div class="bodyrejoindre">
     <h2> <%= @event.location.name %>
     <h4> <%= l(@event.schedule, format: '%A %e %B %Y') %> </h4>
     <% if @event.user == current_user  %>
-      <h6 style="text-align: center"> <em> Evènement créé par vous </em> </h6>
+      <h6 style="text-align: center"> <em> Collecte créée par vous </em> </h6>
     <% else %>
-      <h6 style="text-align: center"> <em> Evènement créé par <%= @event.user.username %> </em> </h6>
+      <h6 style="text-align: center"> <em> Collecte créée par <%= @event.user.username %> </em> </h6>
     <% end %>
   </div>
 
@@ -16,22 +16,22 @@
   <br>
 
   <% if @event.event_participants.length == 0 %>
-    <p> Pas encore de participant à cet évènement </p>
+    <p> Pas encore de participant à cette collecte </p>
   <% elsif @event.event_participants.length == 1 %>
-    <p> <%= @event.event_participants.length %> participant à cet évènement </p>
+    <p> <%= @event.event_participants.length %> participant à cette collecte </p>
   <% else %>
-    <p> <%= @event.event_participants.length %> participants à cet évènement </p>
+    <p> <%= @event.event_participants.length %> participants à cette collecte </p>
   <% end %>
 
 
     <% if @event.users.include?(current_user)  %>
       <p>
-        <i class="fa fa-check" aria-hidden="true"></i> Vous participez à cet évènement
+        <i class="fa fa-check" aria-hidden="true"></i> Vous participez à cette collecte
       </p>
       <p> <%= link_to 'Se désinscrire', event_event_participant_path(@event), class: "btn btn-danger", method: :delete  %>
     <% else %>
       <p>
-        <%= link_to 'Participez à cet évènement', event_event_participants_path(@event), class: "btn btn-lieu", method: :post  %>
+        <%= link_to 'Participez à cette collecte', event_event_participants_path(@event), class: "btn btn-lieu", method: :post  %>
       </p>
     <% end %>
 
