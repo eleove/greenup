@@ -6,12 +6,11 @@
   <div class="checkboxinput">
     <div class="container">
       <ul class="ks-cboxtags">
-        <% ["toto", "tata"].each do |garbage| %>
+        <% Location::GARBAGE.each do |garbage| %>
           <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne"><%= garbage %></label></li>
         <% end %>
       </ul>
     </div>
-
 
     <div class="buttonphoto">
       <%= f.input :photo %>

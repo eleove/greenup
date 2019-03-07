@@ -31,7 +31,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
-    @location.garbage.shift # à régler : le premier string de l'array est vide // input hidden ?
+    # @location.garbage.shift # à régler : le premier string de l'array est vide // input hidden ?
   end
 
   def edit
