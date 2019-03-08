@@ -184,19 +184,19 @@ event1 = Event.create!(
 event2 = Event.create!(
   location: location5, # Valence
   user: user5, # Caro
-  schedule: DateTime.new(2019,05,08,14,00)
+  schedule: DateTime.new(2019,05,8,14,00)
   )
 
 event3 = Event.create!(
   location: location6, # Croignon Nationale
   user: user5, # Caro
-  schedule: DateTime.new(2019,05,08,14,00)
+  schedule: DateTime.new(2019,05,8,14,00)
   )
 
 event4 = Event.create!(
   location: location7, # La Bezole
   user: user5, # Caro
-  schedule: DateTime.new(2019,05,08,14,00)
+  schedule: DateTime.new(2019,05,8,14,00)
   )
 
 # je sais pas pourquoi ça ne créé pas celui-là de base
