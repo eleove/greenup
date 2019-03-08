@@ -176,12 +176,30 @@ location9.save
 # location10.save
 
 event1 = Event.create!(
-  location: location1,
-  user: user2,
+  location: location1, # Annecy
+  user: user2, # Eléonore
   schedule: DateTime.new(2019,03,10,10,30)
   )
 
-# je sais pas pourquoi ça créé par celui-là de base
+event2 = Event.create!(
+  location: location5, # Valence
+  user: user5, # Caro
+  schedule: DateTime.new(2019,05,08,14,00)
+  )
+
+event3 = Event.create!(
+  location: location6, # Croignon Nationale
+  user: user5, # Caro
+  schedule: DateTime.new(2019,05,08,14,00)
+  )
+
+event4 = Event.create!(
+  location: location7, # La Bezole
+  user: user5, # Caro
+  schedule: DateTime.new(2019,05,08,14,00)
+  )
+
+# je sais pas pourquoi ça ne créé pas celui-là de base
 EventParticipant.create!(
   user: user2,
   event: event1
