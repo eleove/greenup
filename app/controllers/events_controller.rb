@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 
     if @event.save
       @event_participant = EventParticipant.create(user: current_user, event: @event)
-      redirect_to event_path(@event), notice: 'Success'
+      redirect_to event_path(@event), notice: 'Collecte créée !'
     else
       render :new
     end

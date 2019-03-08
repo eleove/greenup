@@ -23,7 +23,7 @@ class LocationsController < ApplicationController
     @location.latitude = params[:lat]
     @location.user = current_user
     if @location.save
-      redirect_to locations_path, notice: 'Success'
+      redirect_to locations_path, notice: 'Décharge signalée !'
     else
       render :new
     end
