@@ -6,7 +6,8 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><%= link_to 'Voir la carte', locations_path %></li>
-        <li><%= link_to 'Signaler une décharge sauvage', new_location_path %></li>
+        <li><%= link_to 'Signaler une décharge sauvage;
+        ', new_location_path %></li>
         <li><%= link_to 'Voir toutes les collectes', events_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to 'Mon profil', user_path(current_user) %></li>
