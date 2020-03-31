@@ -7,17 +7,17 @@ Simply run gem install mailcatcher then mailcatcher to get started
 Create an image and publish it to **Docker registry** so that your script can be executed by the Data Eng team.
 
 ## 1 - Goal of the folder
-This folder's goal is to enable Payfiters (Ops or Data Analysts for instance) to run a job on a specific schedule. This job will not need to be run locally anymore, it will be run on Data Engineering team's stack (**Airflow**).
+This folder's goal is to enable Payfiters (Ops and Data Analysts for instance) to run a job on a specific schedule. This job will not need to be run locally anymore, it will be run on the Data Engineering team's stack (**Airflow**).
 
-For that, you'll need to test your code locally and then follow the instructions (2 - Instructions).
+For that, you'll need to test your code locally and then follow the instructions *(see: **2 - Instructions** for more details)*.
 
 What will be done to achieve this?
-- You'll create what we call an **image**, which contains your code, the system dependencies and only the packages your need. Thus, if anyone takes that image and run it on a new and isolated environment (**container**), the code will execute in the same way for everyone /  any lambdas, etc.
-- When created, it will be published on Docker Registry which contains many images, the creds to access Docker Registry are available in `docker_registry_creds`
-- Data Engineering will use that image to run your job on a container, using **Airflow** that schedules our other jobs - It will then enable to schedule the job, see if some day it has failed and why
-- Some credentials like tokens or passwords musn't be in the image because it will be published - so what to do? You'll use environement variables, that won't be in the image:
-    - To test locally, you put them in the `.env` file that won't be included in the image (2 - Instructions for more details)
-    - Airflow will know about these variables because we will write them in a file that only Airflow knows and that is protected from the outside
+- You'll create what we call an **image**, which contains: your code, the system dependencies and only the packages needed. Thus, if anyone takes this image and run it on a new and isolated environment (**container**), the code will execute the same way for everyone /  any lambdas, etc.
+- When created, it will be published on Docker Registry, which contains many images. The creds to access Docker Registry are available in `docker_registry_creds`
+- The Data Engineers will use this image to run your job on a container, using **Airflow** that schedules the other jobs - they will then be able to schedule the job, see if some day it has failed and why.
+- Some credentials like tokens or passwords mustn't be in the image because otherwise they would be published - so what to do? You'll use environment variables, which won't be in the image:
+    - To test locally, you put them in the `.env` file that won't be included in the image *(see: **2 - Instructions** for more details)*
+    - Airflow will know about these variables because we will write them in a file that only Airflow knows and that is protected from the outside.
 
 
 ## 2 - Instructions on how to build an image
@@ -33,8 +33,8 @@ Your folder is now alongside the Python template folder. It must be at the root 
 These instructions are for those who copied pasted the template we've created. You can create your own folder, but the template enables to quickly create your image and publish it on the Docker Registry. You can take whatever you need from the template to achieve the same.
 
 3. Insert your script
-- Copy paste your code into app/main.py, with a function that has a relevant name
-- Write into \_\_name\_\_ == \_\_main\_\_, the name of the function you've just created
+- Copy paste your code into `app/main.py`, with a function that has a relevant name
+- Write into `\_\_name\_\_ == \_\_main\_\_`, the name of the function you've just created
 - Be sure that your packages are written at the top of the file to be imported
 
 4. Use virtual environment and source the one already there
