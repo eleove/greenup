@@ -5,7 +5,7 @@
     "@rails/webpacker": "3.5",
     "bootstrap": "3.4.0",
     "flatpickr": "^4.5.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "mapbox-gl": "^0.53.0"
   },
   "devDependencies": {
